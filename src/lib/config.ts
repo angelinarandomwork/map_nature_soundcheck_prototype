@@ -4,7 +4,7 @@ const requireEnv = (value: string | undefined, key: string): string => {
     return value
 }
 
-const parseBooleanEnv = (value: string | undefined, defaultValue: boolean): boolean => {
+export const parseBooleanEnv = (value: string | undefined, defaultValue: boolean): boolean => {
     if (value === undefined) return defaultValue
     if (value === 'true') return true
     if (value === 'false') return false
@@ -17,6 +17,4 @@ export const config = {
         import.meta.env.VITE_MAPBOX_ACCESS_TOKEN,
         'VITE_MAPBOX_ACCESS_TOKEN',
     ),
-    apiBaseUrl: import.meta.env.VITE_API_BASE_URL ?? '',
-    useMockApi: parseBooleanEnv(import.meta.env.VITE_USE_MOCK_API, false),
 }

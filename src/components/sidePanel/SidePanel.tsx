@@ -1,7 +1,6 @@
 import { Badge, Box, Card, Inline, Stack, Text } from "../../design-system";
 import {
   formatConfidenceScore,
-  formatUnixToDisplayDateTime,
   getHighestConfidenceObservation,
   getUniqueSpeciesCount,
   toFixedCoordinate,

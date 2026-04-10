@@ -1,4 +1,4 @@
-import { Box, Card, Inline, Stack, Text } from "../../design-system";
+import { Card, Inline, Stack, Text } from "../../design-system";
 import styles from "./MapLegend.module.css";
 
 export const MapLegend = () => {
