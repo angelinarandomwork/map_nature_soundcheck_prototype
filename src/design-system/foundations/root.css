@@ -1,0 +1,370 @@
+:root,
+[data-theme="light"] {
+  --color-background-page: linear-gradient(180deg, #f6ebd1 0%, #f3e7cc 100%);
+  --color-background-subtle: #f3e7cc;
+
+  --color-surface-base: linear-gradient(180deg, #c3f4f3 0%, #b4efee 100%);
+  --color-surface-elevated: linear-gradient(180deg, #e1f0db 0%, #d9ead3 100%);
+  --color-surface-floating: linear-gradient(180deg, #e1f0db 0%, #d9ead3 100%);
+  --color-surface-accent: rgba(43, 167, 191, 0.12);
+  --color-surface-danger: rgba(231, 111, 81, 0.1);
+
+  --color-text-primary: #1f2a2a;
+  --color-text-secondary: #3e5f5f;
+  --color-text-muted: #6b8a7c;
+  --color-text-inverse: #ffffff;
+  --color-text-accent: #2ba7bf;
+  --color-text-success: #37a07b;
+  --color-text-warning: #f4a261;
+  --color-text-danger: #e76f51;
+  --color-text-info: #2ba7bf;
+  --color-text-disabled: rgba(31, 42, 42, 0.45);
+
+  --color-border-subtle: rgba(237, 148, 126, 0.18);
+  --color-border-default: #ed947e;
+  --color-border-strong: #9bc17d;
+  --color-border-interactive: #2ba7bf;
+  --color-border-focus: #2ba7bf;
+
+  --color-accent-primary: #2ba7bf;
+  --color-accent-secondary: #37a07b;
+  --color-accent-glow: rgba(43, 167, 191, 0.12);
+
+  --color-state-success: rgba(55, 160, 123, 0.12);
+  --color-state-warning: rgba(244, 162, 97, 0.12);
+  --color-state-danger: rgba(231, 111, 81, 0.1);
+  --color-state-info: rgba(43, 167, 191, 0.12);
+
+  --color-state-success-strong: #37a07b;
+  --color-state-warning-strong: #f4a261;
+  --color-state-danger-strong: #e76f51;
+  --color-state-info-strong: #2ba7bf;
+
+  --color-state-success-border: rgba(55, 160, 123, 0.3);
+  --color-state-warning-border: rgba(244, 162, 97, 0.3);
+  --color-state-danger-border: rgba(231, 111, 81, 0.3);
+  --color-state-info-border: rgba(43, 167, 191, 0.3);
+
+  --color-interaction-hover: rgba(31, 42, 42, 0.05);
+  --color-interaction-active: rgba(31, 42, 42, 0.08);
+  --color-interaction-selected: rgba(43, 167, 191, 0.12);
+  --color-interaction-disabled: rgba(31, 42, 42, 0.06);
+}
+[data-theme="dark"] {
+  --color-background-page: linear-gradient(180deg, #101818 0%, #0d1414 100%);
+  --color-background-subtle: #0f1717;
+
+  --color-surface-base: linear-gradient(180deg, #162121 0%, #121c1c 100%);
+  --color-surface-elevated: linear-gradient(180deg, #1b2929 0%, #162222 100%);
+  --color-surface-floating: linear-gradient(180deg, #223131 0%, #1b2828 100%);
+  --color-surface-accent: rgba(43, 167, 191, 0.16);
+  --color-surface-danger: rgba(231, 111, 81, 0.14);
+
+  --color-text-primary: #ecf5f2;
+  --color-text-secondary: #bfd3cc;
+  --color-text-muted: #8ca49d;
+  --color-text-inverse: #0f1717;
+  --color-text-accent: #67c7d8;
+  --color-text-success: #69c6a0;
+  --color-text-warning: #f7bc84;
+  --color-text-danger: #ef8f78;
+  --color-text-info: #67c7d8;
+  --color-text-disabled: rgba(236, 245, 242, 0.45);
+
+  --color-border-subtle: rgba(255, 255, 255, 0.08);
+  --color-border-default: rgba(255, 255, 255, 0.14);
+  --color-border-strong: rgba(155, 193, 125, 0.45);
+  --color-border-interactive: #2ba7bf;
+  --color-border-focus: #67c7d8;
+
+  --color-accent-primary: #2ba7bf;
+  --color-accent-secondary: #69c6a0;
+  --color-accent-glow: rgba(43, 167, 191, 0.16);
+
+  --color-state-success: rgba(55, 160, 123, 0.16);
+  --color-state-warning: rgba(244, 162, 97, 0.16);
+  --color-state-danger: rgba(231, 111, 81, 0.14);
+  --color-state-info: rgba(43, 167, 191, 0.16);
+
+  --color-state-success-strong: #37a07b;
+  --color-state-warning-strong: #f4a261;
+  --color-state-danger-strong: #e76f51;
+  --color-state-info-strong: #2ba7bf;
+
+  --color-state-success-border: rgba(55, 160, 123, 0.36);
+  --color-state-warning-border: rgba(244, 162, 97, 0.36);
+  --color-state-danger-border: rgba(231, 111, 81, 0.34);
+  --color-state-info-border: rgba(43, 167, 191, 0.36);
+
+  --color-interaction-hover: rgba(255, 255, 255, 0.05);
+  --color-interaction-active: rgba(255, 255, 255, 0.08);
+  --color-interaction-selected: rgba(43, 167, 191, 0.16);
+  --color-interaction-disabled: rgba(255, 255, 255, 0.05);
+}
+
+:root {
+  /* =========================
+        RAW COLOURS
+    ========================= */
+
+  --raw-black: #000000;
+  --raw-white: #ffffff;
+
+  --raw-neutral-0: #ffffff;
+  --raw-neutral-50: #f5f5f5;
+  --raw-neutral-100: #e0e0e0;
+  --raw-neutral-700: #444444;
+  --raw-neutral-800: #2c2c2c;
+  --raw-neutral-950: #0f0f0f;
+  --raw-neutral-1000: #000000;
+
+  --raw-blue-500: #0089ff;
+  --raw-blue-550: #0096ff;
+  --raw-blue-900: #0007cd;
+
+  --raw-cyan-500: #00ffff;
+
+  --raw-alpha-white-04: rgba(255, 255, 255, 0.04);
+  --raw-alpha-white-06: rgba(255, 255, 255, 0.06);
+  --raw-alpha-white-08: rgba(255, 255, 255, 0.08);
+  --raw-alpha-white-10: rgba(255, 255, 255, 0.1);
+  --raw-alpha-white-12: rgba(255, 255, 255, 0.12);
+  --raw-alpha-white-20: rgba(255, 255, 255, 0.2);
+  --raw-alpha-white-50: rgba(255, 255, 255, 0.5);
+  --raw-alpha-white-60: rgba(255, 255, 255, 0.6);
+
+  --raw-alpha-cyan-12: rgba(0, 255, 255, 0.12);
+
+  --raw-alpha-black-15: rgba(0, 0, 0, 0.15);
+  --raw-alpha-black-50: rgba(0, 0, 0, 0.5);
+
+  /* =========================
+        RAW SPACING
+    ========================= */
+
+  --space-0: 0px;
+  --space-1: 1px;
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-14: 14px;
+  --space-16: 16px;
+  --space-18: 18px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-30: 30px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-56: 56px;
+  --space-64: 64px;
+  --space-80: 80px;
+  --space-96: 96px;
+  --space-120: 120px;
+
+  /* =========================
+        RAW TYPOGRAPHY
+    ========================= */
+
+  --font-family-sans: abcDiatype, abcDiatype Fallback, ui-sans-serif, system-ui;
+  --font-family-mono: JetBrains Mono, ui-monospace, monospace;
+  --font-family-monoSystem: Menlo, monospace;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --font-size-9: 0.5625rem;
+  --font-size-10: 0.625rem;
+  --font-size-11: 0.6875rem;
+  --font-size-12: 0.75rem;
+  --font-size-13: 0.8125rem;
+  --font-size-14: 0.875rem;
+  --font-size-15: 0.9375rem;
+  --font-size-16: 1rem;
+  --font-size-18: 1.125rem;
+  --font-size-20: 1.25rem;
+  --font-size-24: 1.5rem;
+  --font-size-28: 1.75rem;
+  --font-size-40: 2.5rem;
+  --font-size-48: 3rem;
+  --font-size-64: 4rem;
+
+  --line-height-87: 0.87;
+  --line-height-100: 1;
+  --line-height-120: 1.2;
+  --line-height-133: 1.33;
+  --line-height-143: 1.43;
+  --line-height-150: 1.5;
+  --line-height-163: 1.63;
+
+  --letter-spacing-normal: 0;
+  --letter-spacing-overline: 0.3px;
+  --letter-spacing-code-body: -0.32px;
+  --letter-spacing-code-small: -0.28px;
+  --letter-spacing-code-overline: 0.7px;
+  --letter-spacing-code-micro: 0.55px;
+  --letter-spacing-code-nano: 0.45px;
+
+  /* =========================
+        RAW RADIUS
+    ========================= */
+
+  --radius-0: 0px;
+  --radius-2: 2px;
+  --radius-4: 4px;
+  --radius-8: 8px;
+  --radius-12: 12px;
+  --radius-16: 16px;
+  --radius-full: 9999px;
+
+  /* =========================
+        RAW BORDERS
+    ========================= */
+
+  --border-width-0: 0px;
+  --border-width-1: 1px;
+  --border-width-2: 2px;
+
+  --border-style-solid: solid;
+  --border-style-dashed: dashed;
+  --border-style-none: none;
+
+  /* =========================
+        RAW ELEVATION
+    ========================= */
+
+  --shadow-none: none;
+  --shadow-subtle: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-brutalist: 4px 4px 0px 0px rgba(0, 0, 0, 0.15);
+  --shadow-floating: 0px 8px 32px rgba(0, 0, 0, 0.5);
+
+  /* =========================
+        RAW MOTION
+    ========================= */
+
+  --motion-duration-fast: 100ms;
+  --motion-duration-base: 160ms;
+  --motion-duration-moderate: 240ms;
+  --motion-duration-slow: 320ms;
+
+  --motion-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+
+  --motion-transition-base: all 160ms var(--motion-easing-standard);
+  --motion-transition-color:
+    color 160ms var(--motion-easing-standard),
+    background-color 160ms var(--motion-easing-standard),
+    border-color 160ms var(--motion-easing-standard);
+
+  /* =========================
+        SEMANTIC COLOURS
+    ========================= */
+
+  /* --color-background-page: var(--raw-neutral-950);
+    --color-background-subtle: var(--raw-neutral-1000);
+
+    --color-surface-base: var(--raw-neutral-1000);
+    --color-surface-elevated: var(--raw-neutral-1000);
+    --color-surface-floating: var(--raw-neutral-1000);
+    --color-surface-accent: var(--raw-alpha-cyan-12);
+    --color-surface-danger: var(--raw-alpha-white-08);
+
+    --color-text-primary: var(--raw-white);
+    --color-text-secondary: var(--raw-alpha-white-60);
+    --color-text-muted: var(--raw-alpha-white-50);
+    --color-text-inverse: var(--raw-black);
+    --color-text-accent: var(--raw-blue-500);
+    --color-text-success: var(--raw-blue-500);
+    --color-text-warning: var(--raw-blue-550);
+    --color-text-danger: var(--raw-blue-900);
+    --color-text-info: var(--raw-blue-500);
+    --color-text-disabled: var(--raw-alpha-white-50);
+
+    --color-border-subtle: var(--raw-alpha-white-06);
+    --color-border-default: var(--raw-alpha-white-10);
+    --color-border-strong: var(--raw-alpha-white-12);
+    --color-border-interactive: var(--raw-blue-500);
+    --color-border-focus: var(--raw-blue-550);
+
+    --color-accent-primary: var(--raw-blue-900);
+    --color-accent-secondary: var(--raw-blue-500);
+    --color-accent-glow: var(--raw-alpha-cyan-12);
+
+    --color-state-success: var(--raw-blue-500);
+    --color-state-warning: var(--raw-blue-550);
+    --color-state-danger: var(--raw-blue-900);
+    --color-state-info: var(--raw-blue-500);
+
+    --color-interaction-hover: var(--raw-alpha-white-08);
+    --color-interaction-active: var(--raw-alpha-white-12);
+    --color-interaction-selected: var(--raw-alpha-cyan-12);
+    --color-interaction-disabled: var(--raw-alpha-white-06); */
+
+  /* =========================
+        SEMANTIC BORDER SHORTHANDS
+    ========================= */
+
+  --border-subtle: var(--border-width-1) var(--border-style-solid)
+    var(--color-border-subtle);
+
+  --border-peach: var(--border-width-1) var(--border-style-solid)
+    var(--color-border-default); 
+  --border-default: var(--border-width-1) var(--border-style-solid)
+    var(--color-state-success-border); 
+
+  --border-strong: var(--border-width-1) var(--border-style-solid)
+    var(--color-border-strong);
+
+  --border-interactive: var(--border-width-1) var(--border-style-solid)
+    var(--color-border-interactive);
+
+  --border-focus: var(--border-width-1) var(--border-style-solid)
+    var(--color-border-focus);
+
+  --border-danger: var(--border-width-1) var(--border-style-solid)
+    var(--color-state-danger);
+
+  /* // motion  */
+  --motion-transition-fast: all 100ms var(--motion-easing-standard);
+  --motion-transition-opacity: opacity 160ms var(--motion-easing-standard);
+  --motion-transition-transform: transform 160ms var(--motion-easing-standard);
+
+  --motion-interaction-hover: var(--motion-transition-color);
+  --motion-interaction-press: var(--motion-transition-fast);
+  --motion-interaction-emphasis: var(--motion-transition-base);
+
+  --motion-state-change: var(--motion-transition-color);
+  --motion-state-visibility: var(--motion-transition-opacity);
+
+  --motion-surface-enter:
+    transform var(--motion-duration-base) var(--motion-easing-standard),
+    opacity var(--motion-duration-base) var(--motion-easing-standard);
+
+  --motion-surface-exit:
+    transform var(--motion-duration-fast) var(--motion-easing-standard),
+    opacity var(--motion-duration-fast) var(--motion-easing-standard);
+
+  --motion-overlay-backdrop: opacity var(--motion-duration-base)
+    var(--motion-easing-standard);
+
+  --motion-overlay-panel-enter:
+    transform var(--motion-duration-base) var(--motion-easing-standard),
+    opacity var(--motion-duration-base) var(--motion-easing-standard);
+
+  --motion-overlay-panel-exit:
+    transform var(--motion-duration-fast) var(--motion-easing-standard),
+    opacity var(--motion-duration-fast) var(--motion-easing-standard);
+
+  --motion-feedback-focus: outline-color var(--motion-duration-fast)
+    var(--motion-easing-standard);
+
+  --motion-feedback-selection:
+    background-color var(--motion-duration-fast) var(--motion-easing-standard),
+    border-color var(--motion-duration-fast) var(--motion-easing-standard);
+
+
+
+}

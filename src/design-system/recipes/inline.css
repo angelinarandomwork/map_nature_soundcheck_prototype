@@ -1,0 +1,140 @@
+.inline {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Spacing */
+
+.inline-0 > * + * {
+  margin-left: var(--space-0);
+}
+
+.inline-1 > * + * {
+  margin-left: var(--space-1);
+}
+
+.inline-2 > * + * {
+  margin-left: var(--space-2);
+}
+
+.inline-4 > * + * {
+  margin-left: var(--space-4);
+}
+
+.inline-6 > * + * {
+  margin-left: var(--space-6);
+}
+
+.inline-8 > * + * {
+  margin-left: var(--space-8);
+}
+
+.inline-10 > * + * {
+  margin-left: var(--space-10);
+}
+
+.inline-12 > * + * {
+  margin-left: var(--space-12);
+}
+
+.inline-14 > * + * {
+  margin-left: var(--space-14);
+}
+
+.inline-16 > * + * {
+  margin-left: var(--space-16);
+}
+
+.inline-18 > * + * {
+  margin-left: var(--space-18);
+}
+
+.inline-20 > * + * {
+  margin-left: var(--space-20);
+}
+
+.inline-24 > * + * {
+  margin-left: var(--space-24);
+}
+
+.inline-30 > * + * {
+  margin-left: var(--space-30);
+}
+
+.inline-32 > * + * {
+  margin-left: var(--space-32);
+}
+
+/* Alignment */
+
+.inline-alignStart {
+  align-items: flex-start;
+}
+
+.inline-alignCentre {
+  align-items: center;
+}
+
+.inline-alignEnd {
+  align-items: flex-end;
+}
+
+.inline-alignBaseline {
+  align-items: baseline;
+}
+
+.inline-alignStretch {
+  align-items: stretch;
+}
+
+/* Justification */
+
+.inline-justifyStart {
+  justify-content: flex-start;
+}
+
+.inline-justifyCentre {
+  justify-content: center;
+}
+
+.inline-justifyEnd {
+  justify-content: flex-end;
+}
+
+.inline-justifyBetween {
+  justify-content: space-between;
+}
+
+/* Wrapping */
+
+.inline-wrap {
+  flex-wrap: wrap;
+}
+
+.inline-noWrap {
+  flex-wrap: nowrap;
+}
+
+/* Gap for wrapped rows */
+
+.inline-wrap.inline-8 {
+  row-gap: var(--space-8);
+}
+
+.inline-wrap.inline-12 {
+  row-gap: var(--space-12);
+}
+
+.inline-wrap.inline-16 {
+  row-gap: var(--space-16);
+}
+
+.inline-wrap.inline-24 {
+  row-gap: var(--space-24);
+}
+
+/* Reverse */
+
+.inline-reverse {
+  flex-direction: row-reverse;
+}

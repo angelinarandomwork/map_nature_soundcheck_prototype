@@ -1,0 +1,19 @@
+.swatch {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: var(--radius-full);
+    border: var(--border-default);
+}
+
+.low {
+    background-color: var(--color-state-danger);
+}
+
+.medium {
+    background-color: var(--color-state-warning);
+}
+
+.high {
+    background-color: var(--color-state-success);
+}

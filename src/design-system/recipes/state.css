@@ -1,0 +1,241 @@
+.state {
+  border-width: var(--border-width-1);
+  border-style: var(--border-style-solid);
+  transition: var(--motion-state-change);
+}
+
+.state-neutral {
+  background-color: var(--color-surface-base);
+  color: var(--color-text-secondary);
+  border-color: var(--color-border-default);
+}
+
+.state-success {
+  background-color: var(--color-state-success);
+  color: var(--color-text-inverse);
+  border-color: var(--color-state-success);
+}
+
+.state-warning {
+  background-color: var(--color-state-warning);
+  color: var(--color-text-inverse);
+  border-color: var(--color-state-warning);
+}
+
+.state-danger {
+  background-color: var(--color-state-danger);
+  color: var(--color-text-inverse);
+  border-color: var(--color-state-danger);
+}
+
+.state-info {
+  background-color: var(--color-state-info);
+  color: var(--color-text-inverse);
+  border-color: var(--color-state-info);
+}
+
+.state-selected {
+  background-color: var(--color-interaction-selected);
+  color: var(--color-text-primary);
+  border-color: var(--color-border-interactive);
+}
+
+.state-disabled {
+  background-color: var(--color-interaction-disabled);
+  color: var(--color-text-disabled);
+  border-color: var(--color-border-subtle);
+  cursor: not-allowed;
+  opacity: 0.72;
+}
+
+.stateSubtle-success {
+  background-color: transparent;
+  color: var(--color-text-success);
+  border-color: var(--color-state-success);
+}
+
+.stateSubtle-warning {
+  background-color: transparent;
+  color: var(--color-text-warning);
+  border-color: var(--color-state-warning);
+}
+
+.stateSubtle-danger {
+  background-color: transparent;
+  color: var(--color-text-danger);
+  border-color: var(--color-state-danger);
+}
+
+.stateSubtle-info {
+  background-color: transparent;
+  color: var(--color-text-info);
+  border-color: var(--color-state-info);
+}
+
+.stateText-success {
+  color: var(--color-text-success);
+}
+
+.stateText-warning {
+  color: var(--color-text-warning);
+}
+
+.stateText-danger {
+  color: var(--color-text-danger);
+}
+
+.stateText-info {
+  color: var(--color-text-info);
+}
+
+.stateText-muted {
+  color: var(--color-text-muted);
+}
+
+.stateText-disabled {
+  color: var(--color-text-disabled);
+}
+
+.state-interactive {
+  transition: var(--motion-interaction-hover), var(--motion-interaction-press);
+}
+
+.state-interactive:hover {
+  border-color: var(--color-border-strong);
+}
+
+.state-interactive:active {
+  border-color: var(--color-border-interactive);
+}
+
+.state-focusable {
+  transition: var(--motion-feedback-focus);
+}
+
+.state-focusable:focus-visible {
+  outline: var(--border-width-2) var(--border-style-solid)
+    var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+/* .state {
+  border-width: var(--border-width-1);
+  border-style: var(--border-style-solid);
+  transition: var(--motion-transition-color);
+}
+
+.state-neutral {
+  background-color: var(--color-surface-base);
+  color: var(--color-text-secondary);
+  border-color: var(--color-border-default);
+}
+
+.state-success {
+  background-color: var(--color-state-success);
+  color: var(--color-text-inverse);
+  border-color: var(--color-state-success);
+}
+
+.state-warning {
+  background-color: var(--color-state-warning);
+  color: var(--color-text-inverse);
+  border-color: var(--color-state-warning);
+}
+
+.state-danger {
+  background-color: var(--color-state-danger);
+  color: var(--color-text-inverse);
+  border-color: var(--color-state-danger);
+}
+
+.state-info {
+  background-color: var(--color-state-info);
+  color: var(--color-text-inverse);
+  border-color: var(--color-state-info);
+}
+
+.state-selected {
+  background-color: var(--color-interaction-selected);
+  color: var(--color-text-primary);
+  border-color: var(--color-border-interactive);
+}
+
+.state-disabled {
+  background-color: var(--color-interaction-disabled);
+  color: var(--color-text-disabled);
+  border-color: var(--color-border-subtle);
+  cursor: not-allowed;
+  opacity: 0.72;
+} */
+
+/* Subtle state variants */
+
+/* .stateSubtle-success {
+  background-color: transparent;
+  color: var(--color-text-success);
+  border-color: var(--color-state-success);
+}
+
+.stateSubtle-warning {
+  background-color: transparent;
+  color: var(--color-text-warning);
+  border-color: var(--color-state-warning);
+}
+
+.stateSubtle-danger {
+  background-color: transparent;
+  color: var(--color-text-danger);
+  border-color: var(--color-state-danger);
+}
+
+.stateSubtle-info {
+  background-color: transparent;
+  color: var(--color-text-info);
+  border-color: var(--color-state-info);
+} */
+
+/* Text-only state helpers */
+
+/* .stateText-success {
+  color: var(--color-text-success);
+}
+
+.stateText-warning {
+  color: var(--color-text-warning);
+}
+
+.stateText-danger {
+  color: var(--color-text-danger);
+}
+
+.stateText-info {
+  color: var(--color-text-info);
+}
+
+.stateText-muted {
+  color: var(--color-text-muted);
+}
+
+.stateText-disabled {
+  color: var(--color-text-disabled);
+} */
+
+/* Interactive state helpers */
+
+/* .state-interactive {
+  transition: var(--motion-transition-base);
+}
+
+.state-interactive:hover {
+  border-color: var(--color-border-strong);
+}
+
+.state-interactive:active {
+  border-color: var(--color-border-interactive);
+}
+
+.state-focusable:focus-visible {
+  outline: var(--border-width-2) var(--border-style-solid)
+    var(--color-border-focus);
+  outline-offset: 2px;
+} */

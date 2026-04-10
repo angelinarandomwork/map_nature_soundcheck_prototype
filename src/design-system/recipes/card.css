@@ -1,0 +1,132 @@
+.card {
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--color-surface-base);
+  border: var(--border-default);
+  border-radius: var(--radius-4);
+  box-shadow: var(--shadow-none);
+
+  padding: var(--space-16);
+  transition: var(--motion-transition-color);
+}
+
+/* Variants */
+
+.card-elevated {
+  background: var(--color-surface-elevated);
+  border: var(--border-default);
+  box-shadow: var(--shadow-none);
+}
+
+.card-brutalist {
+  background-color: var(--color-surface-elevated);
+  border: var(--border-peach);
+  box-shadow: var(--shadow-brutalist);
+}
+
+.card-floating {
+  background: var(--color-surface-floating);
+  border: var(--border-default);
+  box-shadow: var(--shadow-floating);
+}
+
+.card-accent {
+  background: var(--color-surface-accent);
+  border: var(--border-default);
+}
+
+.card-danger {
+  background: var(--color-surface-danger);
+  border: var(--border-danger);
+}
+
+/* Padding scale */
+
+.card-paddingNone {
+  padding: var(--space-0);
+}
+
+.card-paddingSm {
+  padding: var(--space-12);
+}
+
+.card-paddingMd {
+  padding: var(--space-16);
+}
+
+.card-paddingLg {
+  padding: var(--space-24);
+}
+
+/* Radius */
+
+.card-radiusNone {
+  border-radius: var(--radius-0);
+}
+
+.card-radiusSm {
+  border-radius: var(--radius-2);
+}
+
+.card-radiusMd {
+  border-radius: var(--radius-4);
+}
+
+.card-radiusLg {
+  border-radius: var(--radius-8);
+}
+
+/* Internal layout helpers */
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Spacing helpers using stack principles */
+
+.card-stackSm > * + * {
+  margin-top: var(--space-8);
+}
+
+.card-stackMd > * + * {
+  margin-top: var(--space-12);
+}
+
+.card-stackLg > * + * {
+  margin-top: var(--space-16);
+}
+
+/* Interactive */
+
+.card-interactive {
+  cursor: pointer;
+  transition: var(--motion-transition-base);
+}
+
+.card-interactive:hover {
+  border-color: var(--color-border-strong);
+}
+
+.card-interactive:active {
+  border-color: var(--color-border-interactive);
+}
+
+.card-focusable:focus-visible {
+  outline: var(--border-width-2) var(--border-style-solid)
+    var(--color-border-focus);
+  outline-offset: 2px;
+}

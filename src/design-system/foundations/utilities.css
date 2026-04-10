@@ -1,0 +1,157 @@
+/* =========================
+    DISPLAY
+========================= */
+
+.u-block {
+    display: block;
+}
+
+.u-inlineBlock {
+    display: inline-block;
+}
+
+.u-inline {
+    display: inline;
+}
+
+.u-flex {
+    display: flex;
+}
+
+.u-inlineFlex {
+    display: inline-flex;
+}
+
+.u-grid {
+    display: grid;
+}
+
+.u-hidden {
+    display: none;
+}
+
+/* =========================
+    FLEX ALIGNMENT
+========================= */
+
+.u-flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.u-flexBetween {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.u-flexStart {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.u-flexEnd {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* =========================
+    TEXT ALIGNMENT
+========================= */
+
+.u-textLeft {
+    text-align: left;
+}
+
+.u-textCenter {
+    text-align: center;
+}
+
+.u-textRight {
+    text-align: right;
+}
+
+/* =========================
+    WIDTH / HEIGHT
+========================= */
+
+.u-fullWidth {
+    width: 100%;
+}
+
+.u-fullHeight {
+    height: 100%;
+}
+
+/* =========================
+    OVERFLOW
+========================= */
+
+.u-overflowHidden {
+    overflow: hidden;
+}
+
+.u-overflowAuto {
+    overflow: auto;
+}
+
+/* =========================
+    POSITIONING
+========================= */
+
+.u-relative {
+    position: relative;
+}
+
+.u-absolute {
+    position: absolute;
+}
+
+.u-fixed {
+    position: fixed;
+}
+
+/* =========================
+    VISIBILITY
+========================= */
+
+.u-invisible {
+    visibility: hidden;
+}
+
+.u-visible {
+    visibility: visible;
+}
+
+/* =========================
+    CURSOR
+========================= */
+
+.u-pointer {
+    cursor: pointer;
+}
+
+.u-notAllowed {
+    cursor: not-allowed;
+}
+
+/* =========================
+    USER SELECT
+========================= */
+
+.u-noSelect {
+    user-select: none;
+}
+
+/* =========================
+    TRUNCATION
+========================= */
+
+.u-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

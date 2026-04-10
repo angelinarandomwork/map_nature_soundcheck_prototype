@@ -1,0 +1,122 @@
+/* =========================
+    ROOT LAYOUT
+========================= */
+
+body {
+    background: var(--color-background-page);
+    height: 100vh;
+}
+
+/* =========================
+    CONTAINER SYSTEM
+========================= */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--space-16);
+    padding-right: var(--space-16);
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding-left: var(--space-24);
+        padding-right: var(--space-24);
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding-left: var(--space-32);
+        padding-right: var(--space-32);
+    }
+}
+
+/* =========================
+    SECTION SPACING
+========================= */
+
+.section {
+    padding-top: var(--space-64);
+    padding-bottom: var(--space-64);
+}
+
+@media (min-width: 1024px) {
+    .section {
+        padding-top: var(--space-80);
+        padding-bottom: var(--space-80);
+    }
+}
+
+/* =========================
+    GRID SYSTEM (LIGHTWEIGHT)
+========================= */
+
+.grid {
+    display: grid;
+    gap: var(--space-24);
+}
+
+.grid-2 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-3 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) {
+    .grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* =========================
+    FULL WIDTH UTILITIES
+========================= */
+
+.fullWidth {
+    width: 100%;
+}
+
+/* =========================
+    VIEWPORT HEIGHT HANDLING
+========================= */
+
+.minScreenHeight {
+    min-height: 100vh;
+}
+
+
+
+.mapOverlay {
+    position: absolute;
+    z-index: var(--z-index-overlay);
+    pointer-events: none;
+}
+
+.mapOverlay > * {
+    pointer-events: auto;
+}
+
+.mapOverlay-bottomLeft {
+    bottom: var(--space-16);
+    left: var(--space-16);
+}
+
+.mapOverlay-topRight {
+    top: var(--space-16);
+    right: var(--space-16);
+}
+.mapboxgl-ctrl-logo,
+.mapboxgl-ctrl-attrib {
+    display: none !important;
+}

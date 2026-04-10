@@ -1,0 +1,286 @@
+.surface {
+  background-color: transparent;
+  border: var(--border-width-0) var(--border-style-none) transparent;
+  border-radius: var(--radius-4);
+  box-shadow: var(--shadow-none);
+  transition: var(--motion-state-change);
+}
+
+.surface-transparent {
+  background-color: transparent;
+  border: var(--border-width-0) var(--border-style-none) transparent;
+  box-shadow: var(--shadow-none);
+}
+
+.surface-page {
+  background-color: var(--color-background-page);
+  border: var(--border-width-0) var(--border-style-none) transparent;
+  box-shadow: var(--shadow-none);
+}
+
+.surface-subtle {
+  background-color: var(--color-background-subtle);
+  border: var(--border-subtle);
+  box-shadow: var(--shadow-none);
+  overflow-y: auto;
+}
+
+.surface-base {
+  background-color: var(--color-surface-base);
+  border: var(--border-default);
+  box-shadow: var(--shadow-none);
+}
+
+.surface-elevated {
+  background-color: var(--color-accent-secondary);
+  /* background-color: var(--color-surface-elevated); */
+  border: var(--border-default);
+  box-shadow: var(--shadow-none);
+}
+
+.surface-accent {
+  background-color: var(--color-surface-accent);
+  border: var(--border-interactive);
+  box-shadow: var(--shadow-none);
+}
+
+.surface-danger {
+  background-color: var(--color-surface-danger);
+  border: var(--border-danger);
+  box-shadow: var(--shadow-none);
+}
+
+.surface-brutalist {
+  background-color: var(--color-surface-elevated);
+  border: var(--border-strong);
+  box-shadow: var(--shadow-brutalist);
+}
+
+.surface-floating {
+  background-color: var(--color-surface-floating);
+  border: var(--border-default);
+  box-shadow: var(--shadow-floating);
+}
+
+.surface-radiusNone {
+  border-radius: var(--radius-0);
+}
+
+.surface-radiusInline {
+  border-radius: var(--radius-2);
+}
+
+.surface-radiusContainer {
+  border-radius: var(--radius-4);
+}
+
+.surface-radiusOverlay {
+  border-radius: var(--radius-8);
+}
+
+.surface-radiusPill {
+  border-radius: var(--radius-full);
+}
+
+.surface-borderNone {
+  border-width: var(--border-width-0);
+  border-style: var(--border-style-none);
+}
+
+.surface-borderSubtle {
+  border: var(--border-subtle);
+}
+
+.surface-borderDefault {
+  border: var(--border-default);
+}
+
+.surface-borderStrong {
+  border: var(--border-strong);
+}
+
+.surface-borderInteractive {
+  border: var(--border-interactive);
+}
+
+.surface-borderDanger {
+  border: var(--border-danger);
+}
+
+.surface-shadowNone {
+  box-shadow: var(--shadow-none);
+}
+
+.surface-shadowBrutalist {
+  box-shadow: var(--shadow-brutalist);
+}
+
+.surface-shadowFloating {
+  box-shadow: var(--shadow-floating);
+}
+
+.surface-interactive {
+  transition: var(--motion-interaction-hover), var(--motion-interaction-emphasis);
+}
+
+.surface-interactive:hover {
+  border-color: var(--color-border-strong);
+}
+
+.surface-interactive:active {
+  border-color: var(--color-border-interactive);
+}
+
+.surface-focusable {
+  transition: var(--motion-feedback-focus);
+}
+
+.surface-focusable:focus-visible {
+  outline: var(--border-width-2) var(--border-style-solid)
+    var(--color-border-focus);
+  outline-offset: 2px;
+}
+/* .surface {
+    background-color: transparent;
+    border: var(--border-width-0) var(--border-style-none) transparent;
+    border-radius: var(--radius-4);
+    box-shadow: var(--shadow-none);
+    transition: var(--motion-transition-color);
+}
+
+.surface-transparent {
+    background-color: transparent;
+    border: var(--border-width-0) var(--border-style-none) transparent;
+    box-shadow: var(--shadow-none);
+}
+
+.surface-page {
+    background-color: var(--color-background-page);
+    border: var(--border-width-0) var(--border-style-none) transparent;
+    box-shadow: var(--shadow-none);
+}
+
+.surface-subtle {
+    background-color: var(--color-background-subtle);
+    border: var(--border-subtle);
+    box-shadow: var(--shadow-none);
+}
+
+.surface-base {
+    background-color: var(--color-surface-base);
+    border: var(--border-default);
+    box-shadow: var(--shadow-none);
+}
+
+.surface-elevated {
+    background-color: var(--color-surface-elevated);
+    border: var(--border-default);
+    box-shadow: var(--shadow-none);
+}
+
+.surface-accent {
+    background-color: var(--color-surface-accent);
+    border: var(--border-interactive);
+    box-shadow: var(--shadow-none);
+}
+
+.surface-danger {
+    background-color: var(--color-surface-danger);
+    border: var(--border-danger);
+    box-shadow: var(--shadow-none);
+}
+
+.surface-brutalist {
+    background-color: var(--color-surface-elevated);
+    border: var(--border-strong);
+    box-shadow: var(--shadow-brutalist);
+}
+
+.surface-floating {
+    background-color: var(--color-surface-floating);
+    border: var(--border-default);
+    box-shadow: var(--shadow-floating);
+}
+
+/* Radius variants */
+
+/* .surface-radiusNone {
+    border-radius: var(--radius-0);
+}
+
+.surface-radiusInline {
+    border-radius: var(--radius-2);
+}
+
+.surface-radiusContainer {
+    border-radius: var(--radius-4);
+}
+
+.surface-radiusOverlay {
+    border-radius: var(--radius-8);
+}
+
+.surface-radiusPill {
+    border-radius: var(--radius-full);
+} */
+
+/* Border emphasis variants */
+
+/* .surface-borderNone {
+    border-width: var(--border-width-0);
+    border-style: var(--border-style-none);
+}
+
+.surface-borderSubtle {
+    border: var(--border-subtle);
+}
+
+.surface-borderDefault {
+    border: var(--border-default);
+}
+
+.surface-borderStrong {
+    border: var(--border-strong);
+}
+
+.surface-borderInteractive {
+    border: var(--border-interactive);
+}
+
+.surface-borderDanger {
+    border: var(--border-danger);
+} */
+
+/* Shadow variants */
+
+/* .surface-shadowNone {
+    box-shadow: var(--shadow-none);
+}
+
+.surface-shadowBrutalist {
+    box-shadow: var(--shadow-brutalist);
+}
+
+.surface-shadowFloating {
+    box-shadow: var(--shadow-floating);
+} */
+
+/* Interactive helpers */
+/* 
+.surface-interactive {
+    transition: var(--motion-transition-color), var(--motion-transition-base);
+}
+
+.surface-interactive:hover {
+    border-color: var(--color-border-strong);
+}
+
+.surface-interactive:active {
+    border-color: var(--color-border-interactive);
+}
+
+.surface-focusable:focus-visible {
+    outline: var(--border-width-2) var(--border-style-solid)
+        var(--color-border-focus);
+    outline-offset: 2px;
+}  */

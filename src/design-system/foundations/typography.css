@@ -1,0 +1,134 @@
+html {
+    font-family: var(--font-family-sans);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-150);
+    color: var(--color-text-primary);
+}
+
+/* =========================
+    TEXT ROLE UTILITIES
+========================= */
+
+.text-display {
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-64);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-87);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.text-sectionHeading {
+    font-size: var(--font-size-48);
+    line-height: var(--line-height-100);
+}
+
+.text-subheadingLarge {
+    font-size: var(--font-size-40);
+    line-height: var(--line-height-100);
+}
+
+.text-subheading {
+    font-size: var(--font-size-28);
+    line-height: var(--line-height-120);
+}
+
+.text-cardTitle {
+    font-size: var(--font-size-24);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-120);
+}
+
+.text-featureLabel {
+    font-size: var(--font-size-20);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-120);
+}
+
+.text-bodyLarge {
+    font-size: var(--font-size-18);
+    line-height: var(--line-height-120);
+}
+
+.text-body {
+    font-size: var(--font-size-16);
+    line-height: var(--line-height-150);
+}
+
+.text-bodySmall {
+    font-size: var(--font-size-15);
+    line-height: var(--line-height-163);
+}
+
+.text-caption {
+    font-size: var(--font-size-14);
+    line-height: var(--line-height-163);
+}
+
+.text-label {
+    font-size: var(--font-size-13);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-150);
+}
+
+.text-tag {
+    font-size: var(--font-size-12);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-100);
+    letter-spacing: var(--letter-spacing-overline);
+    text-transform: uppercase;
+}
+
+.text-micro {
+    font-size: var(--font-size-12);
+    line-height: var(--line-height-100);
+    letter-spacing: var(--letter-spacing-overline);
+}
+
+/* =========================
+    MONO / CODE
+========================= */
+
+.text-codeBody {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-16);
+    line-height: var(--line-height-150);
+    letter-spacing: var(--letter-spacing-code-body);
+}
+
+.text-codeSmall {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-14);
+    line-height: var(--line-height-150);
+    letter-spacing: var(--letter-spacing-code-small);
+}
+
+.text-codeCaption {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-12);
+    line-height: var(--line-height-150);
+    letter-spacing: var(--letter-spacing-code-small);
+}
+
+.text-codeOverline {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-14);
+    line-height: var(--line-height-143);
+    letter-spacing: var(--letter-spacing-code-overline);
+    text-transform: uppercase;
+}
+
+.text-codeMicro {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-11);
+    line-height: var(--line-height-133);
+    letter-spacing: var(--letter-spacing-code-micro);
+    text-transform: uppercase;
+}
+
+.text-codeNano {
+    font-family: var(--font-family-monoSystem);
+    font-size: var(--font-size-10);
+    line-height: var(--line-height-133);
+    letter-spacing: var(--letter-spacing-code-nano);
+    text-transform: uppercase;
+}

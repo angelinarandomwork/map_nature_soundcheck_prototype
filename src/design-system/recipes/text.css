@@ -1,0 +1,261 @@
+.text {
+    margin: 0;
+    color: var(--color-text-primary);
+    font-family: var(--font-family-sans);
+    font-weight: var(--font-weight-regular);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+/* Role recipes */
+
+.text-display {
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-64);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-87);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.text-sectionHeading {
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-48);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-100);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.text-subheadingLarge {
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-40);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-100);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.text-subheading {
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-28);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-120);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.text-cardTitle {
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-24);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-120);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.text-featureLabel {
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-20);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-120);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.text-bodyLarge {
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-18);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-120);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.text-body {
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-150);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.text-bodySmall {
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-15);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-163);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.text-caption {
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-14);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-163);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.text-label {
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-13);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-150);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.text-tag {
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-12);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-100);
+    letter-spacing: var(--letter-spacing-overline);
+    text-transform: uppercase;
+}
+
+.text-micro {
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-12);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-100);
+    letter-spacing: var(--letter-spacing-overline);
+}
+
+/* Mono roles */
+
+.text-codeBody {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-150);
+    letter-spacing: var(--letter-spacing-code-body);
+}
+
+.text-codeSmall {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-14);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-150);
+    letter-spacing: var(--letter-spacing-code-small);
+}
+
+.text-codeCaption {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-12);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-150);
+    letter-spacing: var(--letter-spacing-code-small);
+}
+
+.text-codeOverline {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-14);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-143);
+    letter-spacing: var(--letter-spacing-code-overline);
+    text-transform: uppercase;
+}
+
+.text-codeMicro {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-11);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-133);
+    letter-spacing: var(--letter-spacing-code-micro);
+    text-transform: uppercase;
+}
+
+.text-codeNano {
+    font-family: var(--font-family-monoSystem);
+    font-size: var(--font-size-10);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-133);
+    letter-spacing: var(--letter-spacing-code-nano);
+    text-transform: uppercase;
+}
+
+/* Tone recipes */
+
+.text-primary {
+    color: var(--color-text-primary);
+}
+
+.text-secondary {
+    color: var(--color-text-secondary);
+}
+
+.text-muted {
+    color: var(--color-text-muted);
+}
+
+.text-inverse {
+    color: var(--color-text-inverse);
+}
+
+.text-accent {
+    color: var(--color-text-accent);
+}
+
+.text-success {
+    color: var(--color-text-success);
+}
+
+.text-warning {
+    color: var(--color-text-warning);
+}
+
+.text-danger {
+    color: var(--color-text-danger);
+}
+
+.text-info {
+    color: var(--color-text-info);
+}
+
+.text-disabled {
+    color: var(--color-text-disabled);
+}
+
+/* Alignment */
+
+.text-left {
+    text-align: left;
+}
+
+.text-centre {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* Wrapping and truncation */
+
+.text-balance {
+    text-wrap: balance;
+}
+
+.text-pretty {
+    text-wrap: pretty;
+}
+
+.text-nowrap {
+    white-space: nowrap;
+}
+
+.text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.text-breakWord {
+    overflow-wrap: break-word;
+}
+
+.text-breakAll {
+    word-break: break-all;
+}
+
+/* Transform helpers */
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-normalCase {
+    text-transform: none;
+}

@@ -1,0 +1,24 @@
+.appShell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 380px;
+  width: 100%;
+  height: 100vh;
+}
+
+.appShell-mapPane {
+  min-width: 0;
+  min-height: 0;
+  position: relative;
+}
+
+.appShell-panelPane {
+  min-width: 0;
+  min-height: 0;
+}
+
+@media (max-width: 960px) {
+  .appShell {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(420px, 60vh) auto;
+  }
+}

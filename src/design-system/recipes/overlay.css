@@ -1,0 +1,316 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-index-overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay-backdrop {
+  position: absolute;
+  inset: 0;
+  background: var(--raw-alpha-black-50);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  transition: var(--motion-overlay-backdrop);
+}
+
+.overlay-open .overlay-backdrop {
+  opacity: 1;
+}
+
+.overlay-content {
+  position: relative;
+  z-index: var(--z-index-modal);
+  background-color: var(--color-surface-floating);
+  border: var(--border-default);
+  border-radius: var(--radius-8);
+  box-shadow: var(--shadow-floating);
+  max-width: 640px;
+  width: 100%;
+  margin: var(--space-16);
+  transform: translateY(8px) scale(0.98);
+  opacity: 0;
+  transition: var(--motion-overlay-panel-enter);
+}
+
+.overlay-open .overlay-content {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.overlay-sm .overlay-content {
+  max-width: 480px;
+}
+
+.overlay-md .overlay-content {
+  max-width: 640px;
+}
+
+.overlay-lg .overlay-content {
+  max-width: 800px;
+}
+
+.overlay-xl .overlay-content {
+  max-width: 1024px;
+}
+
+.overlay-top {
+  align-items: flex-start;
+}
+
+.overlay-bottom {
+  align-items: flex-end;
+}
+
+.overlay-left {
+  justify-content: flex-start;
+}
+
+.overlay-right {
+  justify-content: flex-end;
+}
+
+.overlay-drawerRight .overlay-content {
+  height: 100%;
+  max-width: 400px;
+  margin: 0;
+  border-radius: 0;
+  border-left: var(--border-default);
+  transform: translateX(100%);
+  transition: var(--motion-overlay-panel-enter);
+}
+
+.overlay-open.overlay-drawerRight .overlay-content {
+  transform: translateX(0);
+}
+
+.overlay-drawerLeft .overlay-content {
+  height: 100%;
+  max-width: 400px;
+  margin: 0;
+  border-radius: 0;
+  border-right: var(--border-default);
+  transform: translateX(-100%);
+  transition: var(--motion-overlay-panel-enter);
+}
+
+.overlay-open.overlay-drawerLeft .overlay-content {
+  transform: translateX(0);
+}
+
+.overlay-popover {
+  position: absolute;
+  z-index: var(--z-index-popover);
+  background-color: var(--color-surface-floating);
+  border: var(--border-default);
+  border-radius: var(--radius-4);
+  box-shadow: var(--shadow-floating);
+  padding: var(--space-12);
+  transform: translateY(4px);
+  opacity: 0;
+  transition: var(--motion-surface-enter);
+}
+
+.overlay-popoverOpen {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.overlay-scrollLock {
+  overflow: hidden;
+}
+
+.overlay-content:focus-visible {
+  outline: var(--border-width-2) var(--border-style-solid)
+    var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+
+
+
+/* =========================
+   ROOT OVERLAY CONTAINER
+========================= */
+
+/* .overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-index-overlay);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+/* =========================
+   BACKDROP / SCRIM
+========================= */
+
+/* .overlay-backdrop {
+  position: absolute;
+  inset: 0;
+
+  background: var(--raw-alpha-black-50);
+  backdrop-filter: blur(4px);
+
+  opacity: 0;
+  transition: var(--motion-transition-base);
+}
+
+.overlay-open .overlay-backdrop {
+  opacity: 1;
+} */
+
+/* =========================
+   CONTENT CONTAINER
+========================= */
+
+/* .overlay-content {
+  position: relative;
+  z-index: var(--z-index-modal);
+
+  background-color: var(--color-surface-floating);
+  border: var(--border-default);
+  border-radius: var(--radius-8);
+  box-shadow: var(--shadow-floating);
+
+  max-width: 640px;
+  width: 100%;
+
+  margin: var(--space-16);
+
+  transform: translateY(8px) scale(0.98);
+  opacity: 0;
+
+  transition:
+    transform var(--motion-duration-base) var(--motion-easing-standard),
+    opacity var(--motion-duration-base) var(--motion-easing-standard);
+} */
+
+/* Open state */
+
+/* .overlay-open .overlay-content {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+} */
+
+/* =========================
+   SIZE VARIANTS
+========================= */
+/* 
+.overlay-sm .overlay-content {
+  max-width: 480px;
+}
+
+.overlay-md .overlay-content {
+  max-width: 640px;
+}
+
+.overlay-lg .overlay-content {
+  max-width: 800px;
+}
+
+.overlay-xl .overlay-content {
+  max-width: 1024px;
+} */
+
+/* =========================
+   POSITION VARIANTS
+========================= */
+/* 
+.overlay-top {
+  align-items: flex-start;
+}
+
+.overlay-bottom {
+  align-items: flex-end;
+}
+
+.overlay-left {
+  justify-content: flex-start;
+}
+
+.overlay-right {
+  justify-content: flex-end;
+} */
+
+/* =========================
+   DRAWER VARIANTS
+========================= */
+
+/* .overlay-drawerRight .overlay-content {
+  height: 100%;
+  max-width: 400px;
+  margin: 0;
+
+  border-radius: 0;
+  border-left: var(--border-default);
+
+  transform: translateX(100%);
+}
+
+.overlay-open.overlay-drawerRight .overlay-content {
+  transform: translateX(0);
+}
+
+.overlay-drawerLeft .overlay-content {
+  height: 100%;
+  max-width: 400px;
+  margin: 0;
+
+  border-radius: 0;
+  border-right: var(--border-default);
+
+  transform: translateX(-100%);
+}
+
+.overlay-open.overlay-drawerLeft .overlay-content {
+  transform: translateX(0);
+} */
+
+/* =========================
+   POPOVER (LIGHTWEIGHT)
+========================= */
+/* 
+.overlay-popover {
+  position: absolute;
+  z-index: var(--z-index-popover);
+
+  background-color: var(--color-surface-floating);
+  border: var(--border-default);
+  border-radius: var(--radius-4);
+  box-shadow: var(--shadow-floating);
+
+  padding: var(--space-12);
+
+  transform: translateY(4px);
+  opacity: 0;
+
+  transition: var(--motion-transition-base);
+}
+
+.overlay-popoverOpen {
+  transform: translateY(0);
+  opacity: 1;
+} */
+
+/* =========================
+   SCROLL HANDLING
+========================= */
+/* 
+.overlay-scrollLock {
+  overflow: hidden;
+} */
+
+/* =========================
+   INTERACTIVE STATES
+========================= */
+/* 
+.overlay-content:focus-visible {
+  outline: var(--border-width-2) var(--border-style-solid)
+    var(--color-border-focus);
+  outline-offset: 2px;
+} */

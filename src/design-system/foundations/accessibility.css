@@ -1,0 +1,107 @@
+/* =========================
+    FOCUS RING
+========================= */
+
+:focus-visible {
+  outline: var(--border-width-2) var(--border-style-solid)
+    var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+/* Remove focus ring for non-keyboard interactions (paired with reset.css) */
+:where(:focus:not(:focus-visible)) {
+  outline: none;
+}
+
+/* =========================
+    TEXT SELECTION
+========================= */
+
+::selection {
+  background: var(--color-accent-glow);
+  color: var(--color-text-primary);
+}
+
+/* =========================
+    DISABLED STATE (GLOBAL BASELINE)
+========================= */
+
+:where([disabled], [aria-disabled="true"]) {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Prevent pointer events where appropriate */
+:where([aria-disabled="true"]) {
+  pointer-events: none;
+}
+
+/* =========================
+    REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* =========================
+    SCROLL BEHAVIOUR
+========================= */
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* =========================
+    INTERACTIVE ELEMENT BASELINE
+========================= */
+
+:where(button, [role="button"], a, input, textarea, select) {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* scrollbar  */
+
+/* Firefox */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border-default) transparent;
+}
+
+/* WebKit (Chrome, Edge, Safari) */
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-border-default);
+  border-radius: var(--radius-full);
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-border-default);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-accent-primary);
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: var(--color-accent-secondary);
+}

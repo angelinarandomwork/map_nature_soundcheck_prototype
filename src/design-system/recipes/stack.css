@@ -1,0 +1,124 @@
+.stack {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Spacing scale */
+
+.stack-0 > * + * {
+    margin-top: var(--space-0);
+}
+
+.stack-1 > * + * {
+    margin-top: var(--space-1);
+}
+
+.stack-2 > * + * {
+    margin-top: var(--space-2);
+}
+
+.stack-4 > * + * {
+    margin-top: var(--space-4);
+}
+
+.stack-6 > * + * {
+    margin-top: var(--space-6);
+}
+
+.stack-8 > * + * {
+    margin-top: var(--space-8);
+}
+
+.stack-10 > * + * {
+    margin-top: var(--space-10);
+}
+
+.stack-12 > * + * {
+    margin-top: var(--space-12);
+}
+
+.stack-14 > * + * {
+    margin-top: var(--space-14);
+}
+
+.stack-16 > * + * {
+    margin-top: var(--space-16);
+}
+
+.stack-18 > * + * {
+    margin-top: var(--space-18);
+}
+
+.stack-20 > * + * {
+    margin-top: var(--space-20);
+}
+
+.stack-24 > * + * {
+    margin-top: var(--space-24);
+}
+
+.stack-30 > * + * {
+    margin-top: var(--space-30);
+}
+
+.stack-32 > * + * {
+    margin-top: var(--space-32);
+}
+
+.stack-40 > * + * {
+    margin-top: var(--space-40);
+}
+
+.stack-48 > * + * {
+    margin-top: var(--space-48);
+}
+
+.stack-56 > * + * {
+    margin-top: var(--space-56);
+}
+
+.stack-64 > * + * {
+    margin-top: var(--space-64);
+}
+
+/* Alignment */
+
+.stack-alignStart {
+    align-items: flex-start;
+}
+
+.stack-alignCentre {
+    align-items: center;
+}
+
+.stack-alignEnd {
+    align-items: flex-end;
+}
+
+.stack-alignStretch {
+    align-items: stretch;
+}
+
+/* Justification */
+
+.stack-justifyStart {
+    justify-content: flex-start;
+}
+
+.stack-justifyCentre {
+    justify-content: center;
+}
+
+.stack-justifyEnd {
+    justify-content: flex-end;
+}
+
+.stack-justifyBetween {
+    justify-content: space-between;
+}
+
+/* Reverse */
+
+.stack-reverse {
+    flex-direction: column-reverse;
+}
