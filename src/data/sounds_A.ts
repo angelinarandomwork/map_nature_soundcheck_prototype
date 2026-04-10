@@ -3,7 +3,7 @@ import type { Proprietary } from "../types/data"
 const proprietaryDataset: Array<Proprietary> = [
   {
     id: 'site-dhruv-01',
-    siteName: 'India',
+    siteName: 'Karnataka, India',
     coordinates: { lat: 12.9695, lon: 77.6198 },
     sources: [],
     summary: 'First recording from soldered source.',
@@ -152,8 +152,8 @@ const proprietaryDataset: Array<Proprietary> = [
   },
   {
     id: 'site-angel-01',
-    siteName: 'Brighton',
-    coordinates: { lat: 50, lon: -1.1 },
+    siteName: 'Brighton, UK',
+    coordinates: { lat: 50.82838, lon: -0.13947 },
     sources: [],
     summary: 'fake for now',
     observations: [
@@ -163,7 +163,14 @@ const proprietaryDataset: Array<Proprietary> = [
         "scientificName": "Larus argentatus",
         "confidence": 7.56,
         "fileName": "2026-04-09_10-56-51+0530.wav"
-      }
+      },
+      {
+        "timestamp": 1775390016000,
+        "commonName": "Seagull",
+        "scientificName": "Larus argentatus",
+        "confidence": 12.56,
+        "fileName": "2026-04-09_10-56-51+0530.wav"
+      },
     ]
   }
 ]
