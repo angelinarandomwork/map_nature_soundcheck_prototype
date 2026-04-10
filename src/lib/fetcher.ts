@@ -1,8 +1,11 @@
-export const fetchJson = async <T>(input: RequestInfo | URL, init?: RequestInit): Promise<T> => {
+export const fetchJson = async <T>(
+    input: RequestInfo | URL,
+    init?: RequestInit,
+): Promise<T> => {
     const response = await fetch(input, {
         ...init,
         headers: {
-            'Content-Type': 'application/json',
+            Accept: 'application/json',
             ...(init?.headers ?? {}),
         },
     })

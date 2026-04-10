@@ -1,16 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
+import { fetchJson } from '../lib/fetcher'
+import type { TaxonSearchResponse, SpeciesImageMap, SpeciesImageLoadingMap, UseSpeciesImagesResult } from '../types/data'
 
-type TaxonSearchResponse = {
-  results?: Array<{
-    name?: string
-    default_photo?: {
-      square_url?: string | null
-      medium_url?: string | null
-    } | null
-  }>
-}
-
-type SpeciesImageMap = Record<string, string | null>
 
 const speciesImageCache = new Map<string, string | null>()
 
@@ -25,35 +16,44 @@ const getBestPhotoUrl = (response: TaxonSearchResponse): string | null => {
 }
 
 const fetchSpeciesImage = async (scientificName: string): Promise<string | null> => {
-  const response = await fetch(
+  const payload = await fetchJson<TaxonSearchResponse>(
     `https://api.inaturalist.org/v1/taxa?q=${encodeURIComponent(scientificName)}&rank=species`,
   )
-
-  if (!response.ok) {
-    return null
-  }
-
-  const payload = (await response.json()) as TaxonSearchResponse
 
   return getBestPhotoUrl(payload)
 }
 
-export const useSpeciesImages = (scientificNames: string[]): SpeciesImageMap => {
-  const uniqueScientificNames = useMemo(() => {
-    return [...new Set(scientificNames.filter(Boolean))].sort()
+const buildImageMap = (scientificNames: string[]): SpeciesImageMap => {
+  return scientificNames.reduce<SpeciesImageMap>((accumulator, scientificName) => {
+    accumulator[scientificName] = speciesImageCache.get(scientificName) ?? null
+    return accumulator
+  }, {})
+}
+
+const buildLoadingMap = (
+  scientificNames: string[],
+  unresolvedScientificNames: Set<string>,
+): SpeciesImageLoadingMap => {
+  return scientificNames.reduce<SpeciesImageLoadingMap>((accumulator, scientificName) => {
+    accumulator[scientificName] = unresolvedScientificNames.has(scientificName)
+    return accumulator
+  }, {})
+}
+
+export const useSpeciesImages = (
+  scientificNames: string[],
+): UseSpeciesImagesResult => {
+  const scientificNamesKey = useMemo(() => {
+    return [...new Set(scientificNames.filter(Boolean))].sort().join('|')
   }, [scientificNames])
 
-  const scientificNamesKey = uniqueScientificNames.join('|')
+  const uniqueScientificNames = useMemo(() => {
+    if (!scientificNamesKey)return []
+    return scientificNamesKey.split('|')
+  }, [scientificNamesKey])
 
-  const [imageMap, setImageMap] = useState<SpeciesImageMap>(() => {
-    return uniqueScientificNames.reduce<SpeciesImageMap>((accumulator, scientificName) => {
-      if (speciesImageCache.has(scientificName)) {
-        accumulator[scientificName] = speciesImageCache.get(scientificName) ?? null
-      }
-
-      return accumulator
-    }, {})
-  })
+  const [imageMap, setImageMap] = useState<SpeciesImageMap>({})
+  const [loadingMap, setLoadingMap] = useState<SpeciesImageLoadingMap>({})
 
   useEffect(() => {
     let isCancelled = false
@@ -62,13 +62,12 @@ export const useSpeciesImages = (scientificNames: string[]): SpeciesImageMap => 
       (scientificName) => !speciesImageCache.has(scientificName),
     )
 
+    setImageMap(buildImageMap(uniqueScientificNames))
+    setLoadingMap(
+      buildLoadingMap(uniqueScientificNames, new Set(unresolvedScientificNames)),
+    )
+
     if (unresolvedScientificNames.length === 0) {
-      setImageMap(
-        uniqueScientificNames.reduce<SpeciesImageMap>((accumulator, scientificName) => {
-          accumulator[scientificName] = speciesImageCache.get(scientificName) ?? null
-          return accumulator
-        }, {}),
-      )
       return
     }
 
@@ -84,20 +83,14 @@ export const useSpeciesImages = (scientificNames: string[]): SpeciesImageMap => 
         }),
       )
 
-      if (isCancelled) {
-        return
+      if (isCancelled) return
+
+      for (const [scientificName, imageUrl] of entries) {
+        speciesImageCache.set(scientificName, imageUrl)
       }
 
-      entries.forEach(([scientificName, imageUrl]) => {
-        speciesImageCache.set(scientificName, imageUrl)
-      })
-
-      setImageMap(
-        uniqueScientificNames.reduce<SpeciesImageMap>((accumulator, scientificName) => {
-          accumulator[scientificName] = speciesImageCache.get(scientificName) ?? null
-          return accumulator
-        }, {}),
-      )
+      setImageMap(buildImageMap(uniqueScientificNames))
+      setLoadingMap(buildLoadingMap(uniqueScientificNames, new Set()))
     }
 
     void loadImages()
@@ -105,7 +98,10 @@ export const useSpeciesImages = (scientificNames: string[]): SpeciesImageMap => 
     return () => {
       isCancelled = true
     }
-  }, [scientificNamesKey, uniqueScientificNames])
+  }, [scientificNamesKey])
 
-  return imageMap
+  return {
+    imageMap,
+    loadingMap,
+  }
 }

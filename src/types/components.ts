@@ -1,4 +1,4 @@
-import type { BiodiversitySelectionState, Coordinates, Proprietary, TimeRange } from "./data";
+import type { BiodiversitySelectionState, Coordinates, Proprietary, ProprietaryObservation, TimeRange } from "./data";
 
 export type Score = {
     label: string;
@@ -31,4 +31,10 @@ export type MapViewProps = {
     selectedProprietaryId: string | null
     onMapSelect: (coordinates: Coordinates) => void
     onProprietarySelect: (proprietaryId: string) => void
+}
+
+export type SpeciesCardProps = {
+    observation: ProprietaryObservation
+    imageUrl: string | null
+    isImageResolving: boolean
 }

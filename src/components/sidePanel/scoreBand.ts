@@ -12,3 +12,9 @@ export const getBiodiversityScoreLabel = (score: number): string => {
     if (band === 'medium') return 'Moderate'
     return 'High'
 }
+export const getConfidenceTone = (
+    confidence: number,
+): "success" | "warning" | "info" => {
+    if (confidence >= 12) return "success";
+    return "warning";
+};
