@@ -1,7 +1,6 @@
 import type { JSX } from 'react'
 import type { QuizOptionButtonProps, QuizStatus } from '../types'
 
-
 const getOptionClassName = (status: QuizStatus): string => {
   const classNames = ['quizOption']
 

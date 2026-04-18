@@ -2,6 +2,7 @@ import type { JSX } from 'react'
 import { QuizOptionButton } from './QuizOptionButton'
 import { QuizResultPanel } from './QuizResultPanel'
 import type { QuizQuestionCardProps, QuizStatus } from '../types'
+import "../quiz.css"
 
 
 const getOptionStatus = (

@@ -15,6 +15,7 @@
 .quizOptionLabel {
   margin: 0;
   color: black;
+
 }
 
 .quizGameIntro {
@@ -99,7 +100,10 @@
 }
 
 .quizHintToggle {
-  color: black;
+  color: var(--peach-strong);
+  place-self: center;
+  background: transparent;
+  border: none 
 }
 
 .quizHintPanel {
@@ -124,7 +128,7 @@
   padding: 14px 16px;
   border: var(--border-default);
   border-radius: var(--radius-4);
-  background: var(--white);
+  background: rgba(229, 161, 144, 0.24);
   color: inherit;
   text-align: left;
   cursor: pointer;
@@ -179,7 +183,10 @@
   background: transparent;
 }
 
-.quizOption-selected .quizOptionBullet,
+.quizOption-selected .quizOptionBullet {
+  background: var(--blue-strong);
+  border: 2px solid rgb(32, 71, 117)
+};
 .quizOption-correct .quizOptionBullet {
   background: var(--green-strong);
 }

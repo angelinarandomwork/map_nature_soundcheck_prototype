@@ -1,4 +1,4 @@
-export type UiVariant = 'neutral' | 'peachy' | 'greenish' | 'blueish'
+export type UiVariant = 'neutral' | 'peachy' | 'greenish' | 'blueish' | 'green'
 export type UiAppearance = 'solid' | 'text'
 
 type UiVariantStyle = {
@@ -24,6 +24,12 @@ export const uiVariants: Record<UiVariant, UiVariantStyle> = {
   greenish: {
     background: 'var(--greenish-gradient)',
     border: 'var(--border-green)',
+    boxShadow: 'none',
+    color: 'var(--white)',
+  },
+  green: {
+    background: 'var(--green-strong)',
+    border: '1px solid var(green-dark-low)',
     boxShadow: 'none',
     color: 'var(--white)',
   },

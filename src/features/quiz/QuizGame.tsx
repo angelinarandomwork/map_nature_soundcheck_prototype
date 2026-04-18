@@ -1,6 +1,5 @@
 import type { JSX } from 'react'
 import { AppButton } from '../shared/ui/components/AppButton'
-import './quiz.css'
 import { quizQuestions } from './quizData'
 import { useQuizGame } from './hooks/useQuizGame'
 import { QuizActions } from './components/QuizActions'
@@ -8,6 +7,7 @@ import { QuizCompletionCard } from './components/QuizCompletionCard'
 import { QuizHeader } from './components/QuizHeader'
 import { QuizProgress } from './components/QuizProgress'
 import { QuizQuestionCard } from './components/QuizQuestionCard'
+import './quiz.css'
 
 export const QuizGame = (): JSX.Element => {
   const { currentQuestion, currentQuestionIndex, progressPercentage, questionViewModel, summary, actions } = useQuizGame(quizQuestions)

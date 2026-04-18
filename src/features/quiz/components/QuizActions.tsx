@@ -25,7 +25,7 @@ export const QuizActions = ({
       {!isChecked ? (
         <AppButton
           label="Check Answer"
-          variant="greenish"
+          variant="green"
           onClick={onCheckAnswer}
           disabled={!canCheckAnswer}
           className="quizActionButton"
