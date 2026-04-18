@@ -185,8 +185,9 @@
 
 .quizOption-selected .quizOptionBullet {
   background: var(--blue-strong);
-  border: 2px solid rgb(32, 71, 117)
-};
+  border: 2px solid rgb(32, 71, 117);
+}
+
 .quizOption-correct .quizOptionBullet {
   background: var(--green-strong);
 }
