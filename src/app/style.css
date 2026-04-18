@@ -1,0 +1,101 @@
+.siteShell {
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+}
+
+.siteMain {
+    min-width: 0;
+    min-height: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.siteMain-map {
+    overflow: hidden;
+}
+
+
+/* *~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*  */
+
+.siteHeader {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(8px);
+    background: rgba(246, 235, 209, 0.78);
+    border-bottom: var(--border-green);
+}
+
+.siteBrand {
+    font-size: var(--font-size-18);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-primary);
+}
+
+.siteNav {
+    width: min(1120px, calc(100% - 32px));
+    margin: 0 auto;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+@media (max-width: 640px) {
+    .siteNav {
+        width: min(100%, calc(100% - 24px));
+        padding: 10px 0;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+.siteNavLinks {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.siteNavLink {
+    text-decoration: none;
+    color: var(--color-text-secondary);
+    padding: 8px 12px;
+    border-radius: var(--radius-subtle);
+}
+
+.siteNavLink:hover,
+.siteNavLink:focus-visible::before {
+    background: var(--peachy-orange-gradient);
+    opacity: 0.95;
+}
+
+.siteNavLink-active {
+    background: var(--blue-dark-low);
+    color: var(--color-text-primary);
+    border: var(--border-blue);
+}
+
+/* *~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*  */
+
+.siteFooter {
+    border-top: var(--border-green);
+    background: #f6ebd1c7;
+    display: flex;
+    align-items:center;
+    text-align: center;
+    min-height: 30px;
+}
+
+.siteFooterInner {
+    width: min(1120px, calc(100% - 32px));
+    margin: 0 auto;
+    font-size: 12px;
+    opacity: 0.7;
+    color: var(--color-text-secondary);
+}
+
+/* *~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*  */
+

@@ -1,0 +1,45 @@
+{
+  "name": "map_nature_soundcheck_prototype",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "generate:sounds": "tsx ./src/data/generate-sounds-file.ts --input ./src/data/ndsi_scores.csv --output ./src/data/sounds_A.ts --exportName soundsA",
+    "generate:new": "tsx ./src/data/extract-data-script.ts --input ./src/data/Sayli_result.csv --output ./src/data/new-data.ts",
+    "generate:birds70": "tsx ./src/data/extract-data-script-birds70.ts --input ./src/data/birds_70.csv --output ./src/data/new-birds70.ts"
+  },
+  "devDependencies": {
+  "@types/node": "^25.6.0",
+  "@types/react-dom": "^19.2.3",
+  "@types/react-syntax-highlighter": "^15.5.13",
+  "@types/xlsx": "^0.0.35",
+  "@types/react-map-gl": "^6.1.8",
+  "@types/react-router-dom": "^5.3.3",
+  "@vitejs/plugin-react": "^6.0.1",
+  "tsx": "^4.21.0",
+  "typescript": "~5.9.3",
+  "vite": "^8.0.1"
+},
+"dependencies": {
+  "@emotion/react": "^11.14.0",
+  "@emotion/styled": "^11.14.1",
+  "@mui/icons-material": "^9.0.0",
+  "@mui/material": "^9.0.0",
+  "@supabase/supabase-js": "^2.100.1",
+  "framer-motion": "^12.38.0",
+  "h3-js": "^4.4.0",
+  "mapbox-gl": "^3.20.0",
+  "react-map-gl": "^8.1.0",
+  "react-router": "^7.14.1",
+  "react-router-dom": "^7.14.1",
+  "react-syntax-highlighter": "^16.1.1",
+  "xlsx": "^0.18.5",
+  "sharp": "^0.34.5"
+},
+  "keywords": [],
+  "author": "Angelina",
+  "license": "ISC"
+}

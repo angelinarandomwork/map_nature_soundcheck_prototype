@@ -1,0 +1,247 @@
+.quizGame {
+  display: grid;
+  gap: 24px;
+}
+
+.quizGameHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 16px;
+}
+
+.quizGameTitle,
+.quizQuestionPrompt,
+.quizOptionLabel {
+  margin: 0;
+  color: black;
+}
+
+.quizGameIntro {
+  margin: 8px 0 0;
+  color: black;
+}
+
+.quizGameMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.quizGameMetaPill {
+  padding: 8px 12px;
+  border: var(--border-default);
+  border-radius: 999px;
+  background: var(--green-strong);
+  color: var(--white);
+  white-space: nowrap;
+}
+
+.quizGameMetaPill-score {
+  background: var(--peach-low);
+}
+
+.quizProgress {
+  display: grid;
+  gap: 8px;
+}
+
+.quizProgressTrack {
+  width: 100%;
+  height: 10px;
+  overflow: hidden;
+  border: var(--border-default);
+  border-radius: 999px;
+  background: rgba(55, 160, 123, 0.12);
+}
+
+.quizProgressFill {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--peach-low);
+  transition: width 180ms ease;
+}
+
+.quizQuestionCard {
+  display: grid;
+  gap: 16px;
+  padding: 20px;
+  border: var(--border-default);
+  border-radius: var(--radius-4);
+  background: var(--greenish-gradient);
+}
+
+.quizQuestionCard-summary {
+  min-height: 220px;
+}
+
+.quizQuestionHeader,
+.quizHintSection,
+.quizQuestionResult {
+  display: grid;
+  gap: 8px;
+}
+
+.quizQuestionNumber {
+  display: inline-flex;
+  width: fit-content;
+  padding: 6px 10px;
+  border: var(--border-default);
+  border-radius: 999px;
+  background: rgba(55, 160, 123, 0.14);
+  color: black;
+  font-size: 0.875rem;
+}
+
+.quizHintToggle,
+.quizActionButton {
+  width: fit-content;
+}
+
+.quizHintToggle {
+  color: black;
+}
+
+.quizHintPanel {
+  padding: 14px 16px;
+  border: var(--border-default);
+  border-radius: var(--radius-4);
+  background: var(--peach-low);
+  color: black;
+}
+
+.quizOptionList {
+  display: grid;
+  gap: 10px;
+}
+
+.quizOption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 52px;
+  padding: 14px 16px;
+  border: var(--border-default);
+  border-radius: var(--radius-4);
+  background: var(--white);
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.quizOption:hover:not(:disabled),
+.quizOption:focus-visible,
+.quizHintToggle:hover,
+.quizHintToggle:focus-visible,
+.quizActionButton:hover:not(:disabled),
+.quizActionButton:focus-visible {
+  transform: translateY(-1px);
+}
+
+.quizOption:focus-visible,
+.quizHintToggle:focus-visible,
+.quizActionButton:focus-visible {
+  outline: 2px solid var(--green-strong);
+  outline-offset: 2px;
+}
+
+.quizOption-selected {
+  background: var(--blue-low);
+  border-color: var(--blue-strong);
+}
+
+.quizOption-correct {
+  background: rgba(55, 160, 123, 0.18);
+  border-color: #37a07bd9;
+}
+
+.quizOption-incorrect {
+  background: rgba(244, 162, 97, 0.18);
+  border-color: rgba(244, 162, 97, 0.9);
+}
+
+.quizOption:disabled {
+  cursor: default;
+}
+
+.quizOptionBullet {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  border: 2px solid rgba(29, 98, 98, 0.7);
+  border-radius: 999px;
+  background: transparent;
+}
+
+.quizOption-selected .quizOptionBullet,
+.quizOption-correct .quizOptionBullet {
+  background: var(--green-strong);
+}
+
+.quizOption-incorrect .quizOptionBullet {
+  background: var(--peach-low);
+}
+
+.quizQuestionResult {
+  padding: 16px;
+  border: var(--border-default);
+  border-radius: var(--radius-4);
+  background: rgba(29, 98, 98, 0.42);
+}
+
+.quizQuestionResult-visible {
+  animation: quizFadeIn 180ms ease;
+}
+
+.quizQuestionAnswer,
+.quizQuestionFact {
+  margin: 0;
+  color: var(--white);
+}
+
+.quizGameActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.quizActionButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@keyframes quizFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 720px) {
+  .quizGameHeader {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .quizGameActions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .quizHintToggle,
+  .quizActionButton {
+    width: 100%;
+    justify-content: center;
+  }
+}

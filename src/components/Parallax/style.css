@@ -1,0 +1,383 @@
+.citizenScienceScrollShell {
+  height: 100%;
+  min-height: 0;
+}
+
+.citizenScienceScroll {
+  height: 100%;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.citizenScienceParallaxPage {
+  display: grid;
+  gap: 40px;
+  padding-bottom: 40px;
+}
+
+.citizenScienceParallaxSection {
+  --citizen-overlay-gradient:
+    linear-gradient(
+      to top,
+      rgba(55, 160, 123, 0.22) 0%,
+      rgba(55, 160, 123, 0.14) 50%,
+      rgba(55, 160, 123, 0.08) 100%
+    );
+  --citizen-card-surface: rgba(225, 240, 219, 0.88);
+  --citizen-icon-surface: var(--blue-dark-low);
+  --citizen-button-bg: rgba(43, 167, 191, 0.96);
+  --citizen-button-border: rgba(43, 167, 191, 1);
+  --citizen-button-text: var(--white);
+  --citizen-chip-border: rgba(255, 255, 255, 0.35);
+  --citizen-chip-bg: rgba(255, 255, 255, 0.14);
+  width: 100%;
+}
+
+.citizenScienceParallaxSection--green {
+  --citizen-overlay-gradient:
+    linear-gradient(
+      to top,
+      rgba(55, 160, 123, 0.22) 0%,
+      rgba(55, 160, 123, 0.14) 50%,
+      rgba(55, 160, 123, 0.08) 100%
+    );
+  --citizen-card-surface: rgba(225, 240, 219, 0.88);
+  --citizen-icon-surface: var(--blue-dark-low);
+  --citizen-button-bg: rgba(43, 167, 191, 0.96);
+  --citizen-button-border: rgba(43, 167, 191, 1);
+}
+
+.citizenScienceParallaxSection--orange {
+  --citizen-overlay-gradient:
+    linear-gradient(
+      to top,
+      rgba(244, 162, 97, 0.34) 0%,
+      rgba(244, 162, 97, 0.22) 50%,
+      var(--amber-dark-low) 100%
+    );
+  --citizen-card-surface: rgba(246, 235, 209, 0.9);
+  --citizen-icon-surface: rgba(244, 162, 97, 0.16);
+  --citizen-button-bg: rgba(231, 111, 81, 0.96);
+  --citizen-button-border: rgba(231, 111, 81, 1);
+}
+
+.citizenScienceParallaxHero {
+  position: relative;
+  min-height: 170vh;
+}
+
+.citizenScienceParallaxImage {
+  position: sticky;
+  top: 16px;
+  height: calc(100vh - 32px);
+  overflow: hidden;
+  border: var(--border-default);
+  border-radius: 16px;
+  background: var(--greenish-gradient);
+  isolation: isolate;
+  box-shadow: var(--shadow-brutalist);
+}
+
+.citizenScienceParallaxImageMedia {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: saturate(0.7) contrast(0.9);
+  transform: scale(1);
+}
+
+.citizenScienceParallaxImageOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: var(--citizen-overlay-gradient);
+}
+
+.citizenScienceParallaxOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 24px;
+  text-align: center;
+  color: var(--white);
+  pointer-events: none;
+}
+
+.citizenScienceParallaxEyebrow {
+  margin: 0;
+  padding: 8px 12px;
+  border: 1px solid var(--citizen-chip-border);
+  border-radius: var(--radius-full);
+  /* background: var(--citizen-chip-bg); */
+  /* background: #f3e7cc; */
+  color: white;
+  backdrop-filter: blur(8px);
+  font-size: var(--font-size-14);
+  line-height: var(--line-height-100);
+}
+
+.citizenScienceParallaxHeading {
+  margin: 0;
+  max-width: 14ch;
+  font-size: clamp(2.25rem, 5vw, 5rem);
+  line-height: 1.05;
+  font-weight: var(--font-weight-medium);
+  text-wrap: balance;
+}
+
+.citizenScienceParallaxBody {
+  position: relative;
+  z-index: 1;
+  margin-top: calc(24px * -1);
+}
+
+.citizenScienceParallaxBodyFloating {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 24px;
+  z-index: 2;
+  width: 100%;
+  padding: 0 24px;
+}
+
+.citizenScienceContentGrid {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 24px;
+  align-items: end;
+}
+
+.citizenScienceContentLead,
+.citizenScienceStepCard,
+.citizenScienceInfoCard,
+.citizenScienceSupportSection {
+  border: var(--border-default);
+  border-radius: 16px;
+  background: var(--citizen-card-surface);
+  backdrop-filter: blur(8px);
+  box-shadow: var(--shadow-brutalist);
+}
+
+.citizenScienceContentLead {
+  display: grid;
+  gap: 16px;
+  padding: 24px;
+}
+
+.citizenScienceContentTitle {
+  margin: 0;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  line-height: 1.1;
+  color: var(--color-text-primary);
+}
+
+.citizenScienceContentText {
+  margin: 0;
+  font-size: var(--font-size-16);
+  line-height: var(--line-height-163);
+  color: var(--color-text-secondary);
+}
+
+.citizenScienceActionRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.citizenScienceActionColumn {
+  display: grid;
+  gap: 8px;
+}
+
+.citizenScienceButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 1px solid var(--citizen-button-border);
+  border-radius: var(--radius-small);
+  background: var(--citizen-button-bg);
+  color: var(--citizen-button-text);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.12) inset;
+  transition: var(--motion-transition-base);
+}
+
+.citizenScienceButton:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-brutalist);
+}
+
+.citizenScienceButtonSecondary {
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--color-text-primary);
+  border: var(--border-default);
+}
+
+.citizenScienceTextLink {
+  color: var(--blue-strong);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.citizenScienceStepList,
+.citizenScienceInfoCardGroup {
+  display: grid;
+  gap: 16px;
+}
+
+.citizenScienceInfoCard {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+  padding: 20px;
+}
+
+.citizenScienceInfoCardNoIcon {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.citizenScienceInfoCardIcon {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--blue-strong);
+  border-radius: 16px;
+  background: var(--citizen-icon-surface);
+  color: var(--blue-strong);
+  font-size: 24px;
+}
+
+.citizenScienceInfoCardBody,
+.citizenScienceStepCard div {
+  min-width: 0;
+}
+
+.citizenScienceStepCard {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+  padding: 20px;
+}
+
+.citizenScienceStepNumber {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border: 1px solid var(--reddish-dark-low-strong);
+  border-radius: 16px;
+  background: var(--color-border-subtle);
+  color: var(--peach-strong);
+  font-size: var(--font-size-20);
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+}
+
+.citizenScienceInfoCard h4,
+.citizenScienceStepCard h4 {
+  margin: 0 0 8px;
+  font-size: var(--font-size-18);
+  line-height: var(--line-height-120);
+  color: var(--color-text-primary);
+}
+
+.citizenScienceInfoCard p,
+.citizenScienceStepCard p {
+  margin: 0;
+  font-size: var(--font-size-16);
+  line-height: var(--line-height-163);
+  color: var(--color-text-secondary);
+}
+
+.citizenScienceStepCard code {
+  display: inline-block;
+  padding: 2px 6px;
+  border: var(--border-subtle);
+  border-radius: var(--radius-4);
+  background: rgba(255, 255, 255, 0.42);
+  color: var(--color-text-primary);
+}
+
+.citizenScienceSupportSection {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 24px;
+  background: var(--color-border-subtle);
+}
+
+.citizenScienceSupportInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+@media (max-width: 900px) {
+  .citizenScienceParallaxHero {
+    min-height: 190vh;
+  }
+
+  .citizenScienceContentGrid {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .citizenScienceParallaxBodyFloating {
+    bottom: 16px;
+    padding: 0 16px;
+  }
+
+  .citizenScienceSupportInner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .citizenScienceButton {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .citizenScienceParallaxHero {
+    min-height: 210vh;
+  }
+
+  .citizenScienceParallaxSection {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .citizenScienceParallaxBodyFloating {
+    padding: 0 12px;
+  }
+
+  .citizenScienceInfoCard,
+  .citizenScienceStepCard {
+    grid-template-columns: 1fr;
+  }
+
+  .citizenScienceInfoCardNoIcon {
+    grid-template-columns: 1fr;
+  }
+}

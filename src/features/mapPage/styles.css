@@ -1,0 +1,114 @@
+.mapPageRoot {
+    height: 100%;
+    min-height: 0;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.mapPageRoot-reset {
+    margin: 0;
+    padding: 0;
+    max-width: none;
+    width: 100%;
+    background: transparent;
+}
+
+.appShell {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 380px;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+}
+
+.appShell-mapPane {
+    position: relative;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.appShell-mapPane .mapboxgl-map {
+    position: absolute;
+    inset: 0;
+}
+
+.appShell-panelPane {
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.appShell-panelPane > * {
+    height: 100%;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden
+}
+
+@media (max-width: 960px) {
+    .appShell {
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(420px, 60%) minmax(0, 1fr);
+    }
+}
+
+.mapOverlay {
+    position: absolute;
+    z-index: var(--z-index-overlay);
+    pointer-events: none;
+    max-width: calc(100% - (16px * 2));
+    }
+
+.mapOverlay > * {
+    pointer-events: auto;
+    max-width: 100%;
+}
+
+.mapOverlay-bottomLeft {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    display: flex;
+    justify-content: flex-start;
+}
+.mapboxgl-ctrl-logo,
+.mapboxgl-ctrl-attrib {
+    display: none !important;
+}
+
+.mapboxgl-ctrl-group {
+    border: var(--border-green);
+    border-radius: var(--radius-subtle);
+    overflow: hidden;
+    box-shadow: var(--shadow-floating);
+    background: var(--greenish-gradient);
+}
+
+.mapboxgl-ctrl-group button {
+    width: 32px;
+    height: 32px;
+    background: var(--greenish-gradient);
+    color: var(--color-text-primary);
+}
+
+.mapboxgl-ctrl-group button + button {
+    border-top: var(--border-subtle);
+}
+
+.mapboxgl-ctrl-group button:hover {
+    background: var(--color-interaction-hover);
+}
+
+.mapboxgl-ctrl-group button:active {
+    background: var(--color-interaction-active);
+}
+
+.mapboxgl-ctrl-group button:focus-visible {
+    outline: var(--focus-blue-border);
+    outline-offset: -2px;
+}
+
+.mapboxgl-ctrl-group button .mapboxgl-ctrl-icon {
+    opacity: 1;
+    filter: brightness(0) saturate(100%) invert(16%) sepia(12%) saturate(900%) hue-rotate(165deg) brightness(95%) contrast(92%);
+}

@@ -1,0 +1,90 @@
+.accordionSection {
+  display: grid;
+  gap: 16px;
+}
+
+.accordionSectionHeader {
+  display: grid;
+  gap: 8px;
+}
+
+.accordionSectionTitle {
+  margin: 0;
+}
+
+.accordionSectionIntro {
+  color: var(--color-text-muted, inherit);
+}
+
+.accordionList {
+  display: grid;
+  gap: 8px;
+}
+
+.accordionItem {
+  border: var(--border-green);
+border-radius: var(--radius-subtle);
+  background: var(--greenish-gradient);
+  overflow: hidden;
+}
+
+.accordionItem-disabled {
+  opacity: 0.6;
+}
+
+.accordionTrigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.accordionTrigger:disabled {
+  cursor: not-allowed;
+}
+
+.accordionTriggerTitle {
+  font-weight: 600;
+}
+
+.accordionTriggerIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 20px;
+}
+
+.accordionContentWrapper {
+  overflow: hidden;
+}
+
+.accordionContent {
+  padding: 0 16px 16px;
+  display: grid;
+  gap: 12px;
+}
+
+.accordionContent > :first-child {
+  margin-top: 0;
+}
+
+.accordionContent > :last-child {
+  margin-bottom: 0;
+}
+
+.accordionItem-open .accordionTrigger {
+  border-bottom: var(--border-subtle);
+}
+
+.accordionItem-open .accordionTriggerIcon {
+  color: var(--blue-strong, inherit);
+}

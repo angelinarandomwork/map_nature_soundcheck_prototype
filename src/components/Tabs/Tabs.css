@@ -1,0 +1,118 @@
+.animatedTabs {
+  position: relative;
+  width: 100%;
+  padding: 4px 0;
+}
+
+.animatedTabsList {
+  min-height: unset;
+}
+
+.animatedTabsList .MuiTabs-scroller {
+  overflow: visible;
+}
+
+.animatedTabsList .MuiTabs-flexContainer {
+  gap: 12px;
+  padding: 0 8px 8px;
+}
+
+.animatedTab {
+  position: relative;
+  min-height: 26px;
+  padding: 12px 18px;
+  margin-right: 20px;
+  border: var(--border-default);
+  border-radius: var(--radius-4);
+  background: var(--greenish-gradient);
+  overflow: hidden;
+  isolation: isolate;
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: 600;
+    color: var(--white);
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    background-color 160ms ease,
+    color 160ms ease;
+}
+.animatedTabsList .MuiTabs-flexContainer {
+  gap: 20px;
+  padding: 0 8px 8px;
+}
+.animatedTab::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(
+      to top,
+      rgba(55, 160, 123, 0.22) 0%,
+      rgba(55, 160, 123, 0.14) 50%,
+      rgba(55, 160, 123, 0.08) 100%
+    );
+  opacity: 0.9;
+  transition: background 160ms ease, opacity 160ms ease;
+}
+
+.animatedTab:hover,
+.animatedTab.Mui-focusVisible {
+  transform: translateY(-2px);
+  background: rgba(55, 160, 123, 0.14);
+}
+
+.animatedTab:hover::before,
+.animatedTab.Mui-focusVisible::before {
+  background:
+    linear-gradient(
+      to top,
+      rgba(244, 162, 97, 0.34) 0%,
+      rgba(244, 162, 97, 0.22) 50%,
+      var(--amber-dark-low) 100%
+    );
+  opacity: 0.95;
+}
+
+.animatedTab.Mui-selected {
+  color: var(--white);
+  background: rgba(55, 160, 123, 0.18);
+}
+
+.animatedTab.Mui-selected::before {
+  background:
+    linear-gradient(
+      to top,
+      rgba(244, 162, 97, 0.28) 0%,
+      rgba(244, 162, 97, 0.18) 50%,
+      rgba(244, 162, 97, 0.1) 100%
+    );
+  opacity: 0.95;
+  color: var(--white);
+}
+
+.animatedTab.Mui-focusVisible {
+  outline: none;
+}
+
+.animatedTabsCursor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+  pointer-events: none;
+  border: var(--border-default);
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+    color: var(--white);
+  transition:
+    width 220ms ease,
+    height 220ms ease,
+    left 220ms ease,
+    top 220ms ease,
+    border-radius 220ms ease,
+    opacity 180ms ease;
+}
