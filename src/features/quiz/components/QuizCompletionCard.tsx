@@ -15,7 +15,7 @@ export const QuizCompletionCard = ({ score, totalQuestions }: QuizCompletionCard
           <strong>Score:</strong> {score} out of {totalQuestions}
         </p>
         <p className="quizQuestionFact">
-          <strong>Checked answers:</strong> Every question was evaluated immediately before advancing.
+          <strong>Checked answers:</strong> Fantastic! 
         </p>
       </div>
     </article>
