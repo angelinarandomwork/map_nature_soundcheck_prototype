@@ -42,7 +42,7 @@ export const WORD_BANK = [
   'caves',
   'cairn',
   'tides',
-] as const
+]
 
 export const WORD_LENGTH = 5
 export const MAX_GUESSES = 6
