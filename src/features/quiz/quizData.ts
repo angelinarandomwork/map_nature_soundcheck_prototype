@@ -11,7 +11,7 @@ export const quizQuestions: Array<QuizQuestion> = [
       { id: 'pelican', label: 'Pelican' },
     ],
     correctOptionId: 'lyrebird',
-    hint: 'Look for the bird best known for advanced sound mimicry.',
+    hint: `This bird doesn't need bright colours to display it's wow factor.`,
     funFact: 'Lyrebirds are some of the best sound mimics in the animal kingdom.',
   },
   {
@@ -24,7 +24,7 @@ export const quizQuestions: Array<QuizQuestion> = [
       { id: 'penguin', label: 'Penguin' },
     ],
     correctOptionId: 'octopus',
-    hint: 'Think of a highly intelligent marine animal with camouflage abilities.',
+    hint: `If multitasking had a mascot, this intelligent creatur would be top of the list.`,
     funFact: 'Sleeping octopuses shift through colours and patterns, almost like a dream sequence.',
   },
   {
@@ -37,7 +37,7 @@ export const quizQuestions: Array<QuizQuestion> = [
       { id: 'toucan', label: 'Toucan' },
     ],
     correctOptionId: 'starling',
-    hint: 'It is a smaller bird that is unusually skilled at vocal imitation.',
+    hint: 'An unassuming little bird, but always paying excellent attention to the sounds around it.',
     funFact: 'Starlings can mimic robotic sounds so well that scientists studied them using recordings of R2-D2.',
   },
   {
@@ -50,7 +50,7 @@ export const quizQuestions: Array<QuizQuestion> = [
       { id: 'orchid', label: 'Orchid' },
     ],
     correctOptionId: 'evening-primrose',
-    hint: 'Choose the flowering plant linked to rapid nectar response in pollination studies.',
+    hint: 'It might not be the showiest option here but it’s surprisingly active..',
     funFact: 'The flower increases the sugar in its nectar after sensing bees nearby.',
   },
   {
@@ -66,7 +66,7 @@ export const quizQuestions: Array<QuizQuestion> = [
       { id: 'thunderstorms', label: 'Thunderstorms' },
     ],
     correctOptionId: 'mixed-soundscape',
-    hint: 'A thriving ecosystem usually sounds busy rather than quiet or repetitive.',
+    hint: 'A healthy rainforest ensures everyone in the ecosystem is healthy too.',
     funFact:
       'Scientists use something called the Acoustic Complexity Index to measure how healthy an ecosystem is.',
   },
@@ -80,7 +80,7 @@ export const quizQuestions: Array<QuizQuestion> = [
       { id: 'dolphin', label: 'Dolphin' },
     ],
     correctOptionId: 'humpback-whale',
-    hint: 'It is a large whale species especially known for elaborate, evolving songs.',
+    hint: `This ocean giant's musical prowess is so famous you will probably have heard it's recordings to insire calmness.`,
     funFact:
       'Humpback whales constantly remix their songs, and entire whale populations can slowly adopt new versions.',
   },
@@ -94,7 +94,7 @@ export const quizQuestions: Array<QuizQuestion> = [
       { id: 'pigeon', label: 'Pigeon' },
     ],
     correctOptionId: 'woodpecker',
-    hint: 'Think of the bird that communicates by striking tree trunks repeatedly.',
+    hint: `Anyone else might get a headache, but not this percussionist.`,
     funFact: 'Woodpeckers drum on trees to mark territory and attract mates.',
   },
   {
@@ -107,7 +107,7 @@ export const quizQuestions: Array<QuizQuestion> = [
       { id: 'pistol-shrimp', label: 'Pistol Shrimp' },
     ],
     correctOptionId: 'pistol-shrimp',
-    hint: 'It is a small crustacean famous for an exceptionally powerful claw snap.',
+    hint: 'A tiny creature with a surprisingly explosive trick.',
     funFact:
       'The pistol shrimp’s claw snaps so fast it creates a bubble hotter than the surface of the sun for a split second.',
   },
