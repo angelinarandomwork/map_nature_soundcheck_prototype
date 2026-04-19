@@ -190,9 +190,10 @@ export const DIYPage = (): JSX.Element => {
             style={{
               flex: 1,
               display: "flex",
+              flexDirection: "column",
               justifyContent: "center",
               alignItems: "flex-start",
-              marginTop: "18%",
+              marginTop: "5%",
               marginLeft: "10%",
             }}
           >
@@ -202,7 +203,20 @@ export const DIYPage = (): JSX.Element => {
               style={{
                 maxWidth: "100%",
                 height: "auto",
-                scale: 1.5,
+                scale: 1,
+                border: "var(--border-peach)",
+                borderRadius: "8px",
+                padding: "8px",
+              }}
+            />
+            <img
+              src={whiteCheekedBarbetClock}
+              alt="Example visualisation using the data"
+              style={{
+                maxWidth: "100%",
+                height: "auto",
+                scale: 1,
+                marginTop: '20px',
                 border: "var(--border-peach)",
                 borderRadius: "8px",
                 padding: "8px",
