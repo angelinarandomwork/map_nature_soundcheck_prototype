@@ -16,6 +16,7 @@
 - [ ]  very plain landing page, improve
 - [ ]  logo/header name
 - [ ]  better images
+- [ ]  fix dynamic data movement
 
 ### backend. most of this should be moved
 
