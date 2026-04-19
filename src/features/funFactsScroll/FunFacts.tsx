@@ -1,6 +1,6 @@
 import { useRef, type JSX } from 'react'
 import { useScroll } from 'framer-motion'
-import { useViewportMatch } from './useViewportMatch'
+import { useViewportMatch } from '../../hooks/useViewportMatch'
 import { FactContent } from './FactContent'
 import { MediaRail } from './MediaRail'
 import { factItems } from './factData'
