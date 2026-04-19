@@ -24,7 +24,7 @@ export const quizQuestions: Array<QuizQuestion> = [
       { id: 'penguin', label: 'Penguin' },
     ],
     correctOptionId: 'octopus',
-    hint: `If multitasking had a mascot, this intelligent creatur would be top of the list.`,
+    hint: `If multitasking had a mascot, this intelligent creature would be top of the list.`,
     funFact: 'Sleeping octopuses shift through colours and patterns, almost like a dream sequence.',
   },
   {
@@ -50,7 +50,7 @@ export const quizQuestions: Array<QuizQuestion> = [
       { id: 'orchid', label: 'Orchid' },
     ],
     correctOptionId: 'evening-primrose',
-    hint: 'It might not be the showiest option here but it’s surprisingly active..',
+    hint: 'It might not be the showiest option here but it’s surprisingly active...',
     funFact: 'The flower increases the sugar in its nectar after sensing bees nearby.',
   },
   {
@@ -80,7 +80,7 @@ export const quizQuestions: Array<QuizQuestion> = [
       { id: 'dolphin', label: 'Dolphin' },
     ],
     correctOptionId: 'humpback-whale',
-    hint: `This ocean giant's musical prowess is so famous you will probably have heard it's recordings to insire calmness.`,
+    hint: `This ocean giant's musical prowess is so famous you will probably have heard it's recordings to inspire calmness.`,
     funFact:
       'Humpback whales constantly remix their songs, and entire whale populations can slowly adopt new versions.',
   },
