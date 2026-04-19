@@ -34,6 +34,11 @@
 - [ ]  dhruv walking club
 - [ ]  other
 
+## explain in more detail
+
+- [ ] make diy aspect easy to follow for newbies
+- [ ] images for the tech?
+
 ### tests
 
 - [ ]  add to repo and create unit/integration at least
