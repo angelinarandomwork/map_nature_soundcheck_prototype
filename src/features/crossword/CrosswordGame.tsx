@@ -147,7 +147,7 @@ export const CrosswordGame = (): JSX.Element => {
 
         <div style={getStatusStyle({ isComplete: boardStats.isComplete })}>
           {boardStats.isComplete
-            ? 'Puzzle complete'
+            ? 'Wahoo! Well done!'
             : `${boardStats.completedEntryCount} of ${boardStats.totalEntryCount} answers complete · ${boardStats.correctCellCount} correct cells · ${boardStats.incorrectCellCount} incorrect cells`}
         </div>
       </div>

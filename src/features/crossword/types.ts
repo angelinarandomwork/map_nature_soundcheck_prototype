@@ -89,3 +89,13 @@ export type CrosswordBoardProps = {
   onCellSelect: (row: number, column: number) => void
   onCellKeyDown: (event: KeyboardEvent<HTMLInputElement>) => void
 }
+
+export type CrosswordValidationIssue = {
+  cellKey: string
+  row: number
+  column: number
+  existingEntryId: string
+  incomingEntryId: string
+  existingLetter: string
+  incomingLetter: string
+}
