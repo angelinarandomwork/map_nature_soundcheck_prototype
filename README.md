@@ -1,17 +1,42 @@
 # map_nature_soundcheck_prototype
 
-## TODO: write this
+## TODO
 
-## TODO: fix styling
+### readme
 
-## TODO: backend. most of this should be moved
+- [ ]  write this
 
-## TODO: improve score system/data deriv
+### fix styling
 
-## TODO: collect more data -dhruv walking club
+- [ ]  get out of the css pattern make consistent ui
+- [ ]  colours weird
+- [ ]  keyboard nav
+- [ ]  hover tooltip explanations
+- [ ]  don't like the species cards, make better
 
-## TODO: move picture
+### backend. most of this should be moved
 
-## TODO: tests
+- [ ]  literally such bad practice having everything on the fly on the front end.
+- [ ]  python backend and db for our proprietary data
 
-## TOTO: merge to branch for ci/cd, add tests to deploy process
+### improve score system/data deriv
+
+- [ ]  need to think harder about what we carea about
+- [ ]  how to match data to best practice
+
+### collect more data
+
+- [ ]  audiomoth
+- [ ]  dhruv walking club
+- [ ]  other
+
+### tests
+
+- [ ]  add to repo and create unit/integration at least
+- [ ]  not sure about others due to map nightmare issues.
+
+### ci/cd update/improve
+
+- [ ]  merge to branch for pre check, then deploy to main once good
+- [ ]  add tests to branch deploy process
+- [ ]  linting/typecheck etc
