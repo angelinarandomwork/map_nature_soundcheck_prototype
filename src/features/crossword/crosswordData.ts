@@ -47,7 +47,7 @@ export const CROSSWORD_ENTRIES: Array<CrosswordEntry> = [
     clue: 'For years, we thought they were silent, but they actually hum at 92Hz at night—a low-frequency song that sounds like a meditation track.',
     answer: 'GIRAFFE',
     row: 3,
-    column: 13,
+    column: 12,
   },
   {
     id: '5-across',
