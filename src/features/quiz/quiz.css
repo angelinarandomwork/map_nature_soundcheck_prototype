@@ -126,9 +126,9 @@
   width: 100%;
   min-height: 52px;
   padding: 14px 16px;
-  border: var(--border-default);
+  border: 1px solid var(--peach-low);
   border-radius: var(--radius-4);
-  background: rgba(229, 161, 144, 0.24);
+  background:linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0,0,0,0.05)), rgba(229, 161, 144, 0.24);
   color: inherit;
   text-align: left;
   cursor: pointer;
@@ -178,7 +178,7 @@
   width: 12px;
   height: 12px;
   flex-shrink: 0;
-  border: 2px solid rgba(29, 98, 98, 0.7);
+  border: 2px solid var(--peach-strong);
   border-radius: 999px;
   background: transparent;
 }
