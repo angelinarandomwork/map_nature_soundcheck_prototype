@@ -13,6 +13,9 @@
 - [ ]  keyboard nav
 - [ ]  hover tooltip explanations
 - [ ]  don't like the species cards, make better
+- [ ]  very plain landing page, improve
+- [ ]  logo/header name
+- [ ]  better images
 
 ### backend. most of this should be moved
 
@@ -21,7 +24,7 @@
 
 ### improve score system/data deriv
 
-- [ ]  need to think harder about what we carea about
+- [ ]  need to think harder about what we care about
 - [ ]  how to match data to best practice
 
 ### collect more data
