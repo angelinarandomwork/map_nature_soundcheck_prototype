@@ -4,10 +4,7 @@ import type { UseAudioPlayerOptions, UseAudioPlayerResult, PlaybackStatus } from
 let activeAudioElement: HTMLAudioElement | null = null
 
 const stopOtherAudio = (audioElement: HTMLAudioElement): void => {
-    if (!activeAudioElement || activeAudioElement === audioElement) {
-        return
-    }
-
+    if (!activeAudioElement || activeAudioElement === audioElement) return
     activeAudioElement.pause()
     activeAudioElement.currentTime = 0
 }
@@ -23,16 +20,12 @@ export const useAudioPlayer = ({
     const teardownAudioElement = useCallback((): void => {
         const audioElement = audioRef.current
 
-        if (!audioElement) {
-            return
-        }
+        if (!audioElement) return
 
         audioElement.pause()
         audioElement.src = ""
 
-        if (activeAudioElement === audioElement) {
-            activeAudioElement = null
-        }
+        if (activeAudioElement === audioElement) activeAudioElement = null
 
         audioRef.current = null
     }, [])
@@ -52,9 +45,7 @@ export const useAudioPlayer = ({
             activeAudioElement = audioElement
             await audioElement.play()
         } catch {
-            if (activeAudioElement === audioElement) {
-                activeAudioElement = null
-            }
+            if (activeAudioElement === audioElement)  activeAudioElement = null
 
             setStatus("error")
             onPlayFailure?.()
@@ -80,25 +71,14 @@ export const useAudioPlayer = ({
         const audioElement = new Audio(src)
         audioElement.preload = "none"
 
-        const handlePlay = (): void => {
-            setStatus("playing")
-        }
-
-        const handlePause = (): void => {
-            setStatus("ready")
-        }
-
+        const handlePlay = (): void => setStatus("playing")
+        const handlePause = (): void => setStatus("ready")
         const handleEnded = (): void => {
-            if (activeAudioElement === audioElement) {
-                activeAudioElement = null
-            }
-
+            if (activeAudioElement === audioElement) activeAudioElement = null
             setStatus("ready")
         }
 
-        const handleWaiting = (): void => {
-            setStatus("loading")
-        }
+        const handleWaiting = (): void => setStatus("loading")
 
         const handleCanPlay = (): void => {
             setStatus((currentStatus) =>
@@ -107,10 +87,7 @@ export const useAudioPlayer = ({
         }
 
         const handleError = (): void => {
-            if (activeAudioElement === audioElement) {
-                activeAudioElement = null
-            }
-
+            if (activeAudioElement === audioElement) activeAudioElement = null
             setStatus("error")
         }
 
@@ -124,9 +101,7 @@ export const useAudioPlayer = ({
         audioRef.current = audioElement
         setStatus("ready")
 
-        if (autoplay) {
-            void play()
-        }
+        if (autoplay) void play()
 
         return () => {
             audioElement.pause()
@@ -137,9 +112,7 @@ export const useAudioPlayer = ({
             audioElement.removeEventListener("canplay", handleCanPlay)
             audioElement.removeEventListener("error", handleError)
 
-            if (activeAudioElement === audioElement) {
-                activeAudioElement = null
-            }
+            if (activeAudioElement === audioElement) activeAudioElement = null
         }
     }, [autoplay, play, src, teardownAudioElement])
 

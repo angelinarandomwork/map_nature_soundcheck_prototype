@@ -49,13 +49,8 @@ export const groupObservationsBySpecies = <TObservation extends SupportedObserva
       }
     })
     .sort((left, right) => {
-      if (right.observationCount !== left.observationCount) {
-        return right.observationCount - left.observationCount
-      }
-
-      if (right.highestConfidence !== left.highestConfidence) {
-        return right.highestConfidence - left.highestConfidence
-      }
+      if (right.observationCount !== left.observationCount)return right.observationCount - left.observationCount
+      if (right.highestConfidence !== left.highestConfidence) return right.highestConfidence - left.highestConfidence
 
       return left.commonName.localeCompare(right.commonName)
     })
@@ -64,9 +59,7 @@ export const groupObservationsBySpecies = <TObservation extends SupportedObserva
 export const getSpeciesBreakdown = <TObservation extends SupportedObservation>(
   observations: Array<TObservation>,
 ): Array<SpeciesBreakdownItem> => {
-  if (observations.length === 0) {
-    return []
-  }
+  if (observations.length === 0) return []
 
   const groupedObservations = groupObservationsBySpecies(observations)
 

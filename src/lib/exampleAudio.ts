@@ -61,7 +61,6 @@ const fetchQuery = async (
   }
 
   const json = (await response.json()) as XenoCantoResponse
-
   if (json.error) {
     console.warn('xeno-canto API error', query, json.error)
     return []

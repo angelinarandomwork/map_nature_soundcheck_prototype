@@ -43,10 +43,7 @@ const toNdsiRecord = (record: SoundsARecord): { key: NdsiLookupKey; value: NdsiR
 const buildNdsiLookup = (records: Array<SoundsARecord>): Map<NdsiLookupKey, NdsiRecord> => {
   return records.reduce<Map<NdsiLookupKey, NdsiRecord>>((lookup, record) => {
     const parsedRecord = toNdsiRecord(record)
-
-    if (!parsedRecord) {
-      return lookup
-    }
+    if (!parsedRecord) return lookup
 
     lookup.set(parsedRecord.key, parsedRecord.value)
     return lookup

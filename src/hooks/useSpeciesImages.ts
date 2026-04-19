@@ -2,15 +2,12 @@ import { useEffect, useMemo, useState } from 'react'
 import { fetchJson } from '../lib/fetcher'
 import type { TaxonSearchResponse, SpeciesImageMap, SpeciesImageLoadingMap, UseSpeciesImagesResult } from '../types/data'
 
-
 const speciesImageCache = new Map<string, string | null>()
 
 const getBestPhotoUrl = (response: TaxonSearchResponse): string | null => {
   const firstResult = response.results?.[0]
 
-  if (!firstResult?.default_photo) {
-    return null
-  }
+  if (!firstResult?.default_photo) return null
 
   return firstResult.default_photo.square_url ?? firstResult.default_photo.medium_url ?? null
 }
@@ -67,9 +64,7 @@ export const useSpeciesImages = (
       buildLoadingMap(uniqueScientificNames, new Set(unresolvedScientificNames)),
     )
 
-    if (unresolvedScientificNames.length === 0) {
-      return
-    }
+    if (unresolvedScientificNames.length === 0) return
 
     const loadImages = async () => {
       const entries = await Promise.all(

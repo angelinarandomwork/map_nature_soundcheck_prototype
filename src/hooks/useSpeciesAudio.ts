@@ -54,9 +54,7 @@ export const useSpeciesAudio = ({
       setIsAudioPlaying(false)
       setIsAudioLoading(false)
 
-      if (activeAudioElement === audioElement) {
-        activeAudioElement = null
-      }
+      if (activeAudioElement === audioElement) activeAudioElement = null
     }
 
     const handleCanPlay = (): void => {
@@ -73,9 +71,7 @@ export const useSpeciesAudio = ({
       setIsAudioLoading(false)
       setHasAudioError(true)
 
-      if (activeAudioElement === audioElement) {
-        activeAudioElement = null
-      }
+      if (activeAudioElement === audioElement) activeAudioElement = null
     }
 
     audioElement.addEventListener('play', handlePlay)
@@ -108,9 +104,7 @@ export const useSpeciesAudio = ({
           setHasAudioError(true)
           setAudioState({ status: 'unavailable' })
 
-          if (activeAudioElement === audioElement) {
-            activeAudioElement = null
-          }
+          if (activeAudioElement === audioElement) activeAudioElement = null
         }
       })()
     }
@@ -124,13 +118,9 @@ export const useSpeciesAudio = ({
       audioElement.removeEventListener('waiting', handleWaiting)
       audioElement.removeEventListener('error', handleError)
 
-      if (activeAudioElement === audioElement) {
-        activeAudioElement = null
-      }
+      if (activeAudioElement === audioElement) activeAudioElement = null
 
-      if (audioRef.current === audioElement) {
-        audioRef.current = null
-      }
+      if (audioRef.current === audioElement) audioRef.current = null
     }
   }, [audioUrl])
 
@@ -161,9 +151,7 @@ export const useSpeciesAudio = ({
       setHasAudioError(true)
       setAudioState({ status: 'unavailable' })
 
-      if (activeAudioElement === audioElement) {
-        activeAudioElement = null
-      }
+      if (activeAudioElement === audioElement) activeAudioElement = null
     }
   }
 

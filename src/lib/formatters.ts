@@ -1,17 +1,48 @@
-import type { BaseObservation, Proprietary, TimeRange } from "../entities"
+import type { BaseObservation, Coordinates, Proprietary, TimeRange } from "../entities"
+import { config } from "./config"
 
 export const toPercentage = (value: number): string => `${Math.round(value * 100)}%`
-
 export const toScore = (value: number): string => `${Math.round(value * 100)}/100`
-
 export const toFixedCoordinate = (value: number): string => value.toFixed(5)
+export const toIsoDate = (unixMs: number): string => {
+    return new Date(unixMs).toISOString().slice(0, 10)
+}
+
+export const roundTo = (value: number, decimalPlaces: number): number => {
+    return Number(value.toFixed(decimalPlaces))
+}
+
+export const clamp = (value: number, minimum: number, maximum: number): number => {
+    return Math.min(maximum, Math.max(minimum, value))
+}
+
+export const getSearchRadiusKm = (): number => {
+    return config.biodiversitySearchRadiusKm
+}
+
+
+export const createBoundingBox = (coordinates: Coordinates, radiusKm: number) => {
+    const latitudeDelta = radiusKm / 111.32
+    const longitudeDelta = radiusKm / (111.32 * Math.max(Math.cos((coordinates.lat * Math.PI) / 180), 0.1))
+
+    return {
+        minLat: roundTo(coordinates.lat - latitudeDelta, 4),
+        maxLat: roundTo(coordinates.lat + latitudeDelta, 4),
+        minLon: roundTo(coordinates.lon - longitudeDelta, 4),
+        maxLon: roundTo(coordinates.lon + longitudeDelta, 4),
+    }
+}
 
 
 export const MINUTE_IN_MS = 60 * 1000
 export const HOUR_IN_MS = 60 * MINUTE_IN_MS
 export const DAY_IN_MS = 24 * HOUR_IN_MS
-const DEFAULT_APPLICATION_WINDOW_IN_DAYS = 30
-const DEFAULT_SELECTED_WINDOW_IN_DAYS = 7
+export const DEFAULT_APPLICATION_WINDOW_IN_DAYS = 30
+export const DEFAULT_SELECTED_WINDOW_IN_DAYS = 7
+export const MAX_OBSERVATIONS_PER_SOURCE = 40
+export const XENO_CANTO_RESULT_PAGE_SIZE = 50
+export const DEFAULT_SEARCH_RADIUS_KM = 10
+export const DAYS_IN_MONTH_APPROXIMATION = 30
 
 export const isValidTimeRange = ({ earliestDateTime, latestDateTime }: TimeRange): boolean => {
     return earliestDateTime <= latestDateTime
